@@ -1,2 +1,0 @@
-permissiondenied.net
-====================
