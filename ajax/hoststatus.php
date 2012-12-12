@@ -38,8 +38,6 @@ if (isset($_POST['host'])) {
         
         if ($responses[0]['status']['code'] == 200) {
             
-            //$response .= "Number of responses: $number<br />";
-            
             if ($redirects) {
                 
                 foreach (array_reverse($responses) as $r) {
@@ -56,17 +54,6 @@ if (isset($_POST['host'])) {
             }
             
             $destinationIp = gethostbyname($_POST['host']);
-            
-            /*if (!isset($ourIps[$destinationIp])) {
-            
-                $level = 7;
-                $response .= '<b>Domain is not pointing to our servers (' . $destinationIp . ').</b><br />';
-            }
-            else {
-                
-                $level = $tripTime > 2 ? 4 : ($tripTime > 1.5 ? 3 :($tripTime > 1 ? 2 : ($tripTime > 0.5 ? 2 : 0)));
-                $response .= 'Domain is pointing to <b>' . $ourIps[$destinationIp] . '</b>.<br />';
-            }*/
             
             $level = $tripTime > 2 ? 4 : ($tripTime > 1.5 ? 3 :($tripTime > 1 ? 2 : ($tripTime > 0.5 ? 2 : 0)));
             $response .= 'Domain is pointing to <b>' . $destinationIp . '</b>.<br />';
