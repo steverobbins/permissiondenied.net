@@ -6,8 +6,8 @@
 
 <ul>
 
-	<li><a href="http://google.com/chrome" target="_blank">Download Google Chrome</a></li>
-	<li><a href="http://getfirefox.com" target="_blank">Download Firefox</a></li>
-	<li><a href="http://www.apple.com/safari" target="_blank">Download Safari</a></li>
+    <li><a href="http://google.com/chrome" target="_blank">Download Google Chrome</a></li>
+    <li><a href="http://getfirefox.com" target="_blank">Download Firefox</a></li>
+    <li><a href="http://www.apple.com/safari" target="_blank">Download Safari</a></li>
 
 </ul>

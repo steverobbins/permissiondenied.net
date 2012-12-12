@@ -38,11 +38,11 @@ for ($i = 0; $i < count($aTables); $i++): ?>
 <table><?php
     
     $result = mysql_query("SELECT * FROM " . $aTables[$i]) or die(mysql_error());
-	
+    
     echo "<tr>";
     foreach ($aFields[$i] as $field) echo "<th>" . $field . "</th>";
     echo "</tr>";
-	
+    
     while ($row = mysql_fetch_assoc($result)) {
         
         echo "<tr>";

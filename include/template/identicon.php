@@ -2,23 +2,23 @@
 
 <p class="alignC"><?php
 
-	for ($i = 0; $i < 9; $i++) {
-		
-		$s = 64;
-		
-		echo '<img src="' . WEB_ROOT . '/identicon/' . $s . '/' . md5(rand(0, 20)) . '.png" height="' . $s . '" width="' . $s . '" alt="" />';
-	}
+    for ($i = 0; $i < 9; $i++) {
+        
+        $s = 64;
+        
+        echo '<img src="' . WEB_ROOT . '/identicon/' . $s . '/' . md5(rand(0, 20)) . '.png" height="' . $s . '" width="' . $s . '" alt="" />';
+    }
 
 ?></p>
 
 <form action="<?=ROOT?>identicon" method="get">
-	<fieldset>
-		<legend>Identicon Creator</legend>
-		<label>String: <input type="text" name="hashText" value="<?=isset($_GET['h']) ? $_GET['h'] : $_SERVER['REMOTE_ADDR']?>" /></label><br />
-		<label>Image Size: <input type="text" name="imageSize" value="<?=isset($_GET['s']) ? $_GET['s'] : 150?>" /></label>px<br />
-		<label>Hash It?: <input type="checkbox"<?=isset($_GET['v']) ? '' : ' checked="checked"'?> name="hashValue" value="1" /></label> <em>(using md5)</em><br />
-		<input type="submit" />
-	</fieldset>
+    <fieldset>
+        <legend>Identicon Creator</legend>
+        <label>String: <input type="text" name="hashText" value="<?=isset($_GET['h']) ? $_GET['h'] : $_SERVER['REMOTE_ADDR']?>" /></label><br />
+        <label>Image Size: <input type="text" name="imageSize" value="<?=isset($_GET['s']) ? $_GET['s'] : 150?>" /></label>px<br />
+        <label>Hash It?: <input type="checkbox"<?=isset($_GET['v']) ? '' : ' checked="checked"'?> name="hashValue" value="1" /></label> <em>(using md5)</em><br />
+        <input type="submit" />
+    </fieldset>
 </form>
 
 <p>Or link to it in image srcs:</p>
@@ -48,10 +48,10 @@ echo '&lt;img src="' . $src . '" height="' . $size . '" width="' . $size . '" al
 
 <p class="alignC"><?php
 
-	for ($i = 0; $i < 9; $i++) {
-		
-		echo '<img src="' . WEB_ROOT . '/identicon/' . $s . '/' . md5(rand(0, 20)) . '.png" height="' . $s . '" width="' . $s . '" alt="" />';
-	}
+    for ($i = 0; $i < 9; $i++) {
+        
+        echo '<img src="' . WEB_ROOT . '/identicon/' . $s . '/' . md5(rand(0, 20)) . '.png" height="' . $s . '" width="' . $s . '" alt="" />';
+    }
 
 ?></p>
 

@@ -1,21 +1,21 @@
 <?php include 'include/global.php' ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-	<head>
-	
-		<title>Web Site Terms and Conditions of Use - <?=SITE_NAME?></title>
-		
-		<?php include 'include/head.php' ?>
-	
-	</head>
-	
-	<body>
-		
-		<?php include 'include/template/global/header.php' ?>
-		
-		<div id="body">
+    <head>
+    
+        <title>Web Site Terms and Conditions of Use - <?=SITE_NAME?></title>
         
-        	<h2>Web Site Terms and Conditions of Use</h2>
+        <?php include 'include/head.php' ?>
+    
+    </head>
+    
+    <body>
+        
+        <?php include 'include/template/global/header.php' ?>
+        
+        <div id="body">
+        
+            <h2>Web Site Terms and Conditions of Use</h2>
 
             <h3>
                 1. Terms
@@ -108,11 +108,11 @@
                 General Terms and Conditions applicable to Use of a Web Site.
             </p>
         </div>
-		
-		<div class="clear"></div>
-	
-		<?php include 'include/template/global/footer.php' ?>
-		
-	</body>
-	
+        
+        <div class="clear"></div>
+    
+        <?php include 'include/template/global/footer.php' ?>
+        
+    </body>
+    
 </html>

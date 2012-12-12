@@ -9,7 +9,7 @@
 <?php /*<script type="text/javascript" src="<?=version("js/global.js")?>"></script>*/ ?>
 <script type="text/javascript">
 
-	<?=file_get_contents(SERVER_ROOT . "cdn/js/global.js")?>
+    <?=file_get_contents(SERVER_ROOT . "cdn/js/global.js")?>
 
 </script>
 <!-- AddThis Welcome BEGIN -->

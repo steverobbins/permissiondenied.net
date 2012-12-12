@@ -4,11 +4,11 @@
 
 <?php
 
-	$stmt = $db->query("SELECT COUNT(DISTINCT IpId) Count
-						FROM Traffic
-						WHERE Time > NOW() - INTERVAL 1 MONTH");
-						
-	$row = $stmt->fetch();
+    $stmt = $db->query("SELECT COUNT(DISTINCT IpId) Count
+                        FROM Traffic
+                        WHERE Time > NOW() - INTERVAL 1 MONTH");
+                        
+    $row = $stmt->fetch();
 
 ?>
 
@@ -18,21 +18,21 @@
 
 <table class="sortable">
 
-	<thead>
-	
-		<tr>
+    <thead>
     
-			<th>Hits</th>
-			<th>URL</th>
-			<th>Last Visit</th>
-			
-		</tr>
+        <tr>
+    
+            <th>Hits</th>
+            <th>URL</th>
+            <th>Last Visit</th>
+            
+        </tr>
     
     </thead>
     
     <tbody>
 
-	<?php
+    <?php
     
         $stmt = $db->query("SELECT COUNT(DISTINCT IpId) Count, Value, MAX(Time) Time
                             FROM Traffic
@@ -43,7 +43,7 @@
                             AND Value NOT LIKE '%.png'
                             AND Value NOT LIKE '%.ico'
                             AND Value NOT LIKE '/ajax/%'
-							AND Time > NOW() - INTERVAL 1 MONTH
+                            AND Time > NOW() - INTERVAL 1 MONTH
                             GROUP BY PageId
                             ORDER BY Count DESC, Time DESC
                             LIMIT 10");
@@ -55,7 +55,7 @@
     
     ?>
 
-	</tbody>
+    </tbody>
     
 </table>
 
@@ -63,20 +63,20 @@
 
 <table class="sortable">
 
-	<thead>
-	
-		<tr>
+    <thead>
     
-			<th>Hits</th>
-			<th>Browser</th>
-		
-		</tr>
+        <tr>
+    
+            <th>Hits</th>
+            <th>Browser</th>
+        
+        </tr>
     
     </thead>
     
     <tbody>
 
-	<?php
+    <?php
     
         $stmt = $db->query("SELECT COUNT(DISTINCT IpId) Count, Value
                             FROM Traffic
@@ -85,16 +85,16 @@
                             WHERE Time > NOW() - INTERVAL 1 MONTH
                             GROUP BY AgentId
                             ORDER BY Count DESC, Value");
-							
-		$browsers = array();                            
+                            
+        $browsers = array();                            
         while($row = $stmt->fetch()) $browsers = browserGroup($browsers, $row['Value'], $row['Count']);
-		arsort($browsers);
-		$browsers = array_slice($browsers, 0, 10);
-		foreach($browsers as $key => $value) echo "<tr><td>{$value}</td><td>$key</td></tr>";
+        arsort($browsers);
+        $browsers = array_slice($browsers, 0, 10);
+        foreach($browsers as $key => $value) echo "<tr><td>{$value}</td><td>$key</td></tr>";
     
     ?>
 
-	</tbody>
+    </tbody>
     
 </table>
 
@@ -102,20 +102,20 @@
 
 <table class="sortable">
 
-	<thead>
-	
-		<tr>
-		
-			<th>Hits</th>
-			<th>Region</th>
-			
-		</tr>
+    <thead>
+    
+        <tr>
+        
+            <th>Hits</th>
+            <th>Region</th>
+            
+        </tr>
     
     </thead>
     
     <tbody>
 
-	<?php
+    <?php
     
         $stmt = $db->query("SELECT COUNT(DISTINCT IpId) Count, Value
                             FROM Traffic
@@ -124,16 +124,16 @@
                             WHERE Time > NOW() - INTERVAL 1 MONTH
                             GROUP BY IpId, Value
                             ORDER BY Count DESC, Time DESC");
-							
-		$cities = array();                            
+                            
+        $cities = array();                            
         while($row = $stmt->fetch()) $cities = cityGroup($cities, $row['Value'], $row['Count']);
-		arsort($cities);
-		$cities = array_slice($cities, 0, 10);
-		foreach($cities as $key => $value) echo "<tr><td>{$value}</td><td>$key</td></tr>";
+        arsort($cities);
+        $cities = array_slice($cities, 0, 10);
+        foreach($cities as $key => $value) echo "<tr><td>{$value}</td><td>$key</td></tr>";
     
     ?>
 
-	</tbody>
+    </tbody>
     
 </table>
 
@@ -143,32 +143,32 @@
 
 <table class="sortable">
 
-	<thead>
-	
-		<tr>
-		
-			<th>Query</th>
-			<th>When</th>
-			
-		</tr>
+    <thead>
+    
+        <tr>
+        
+            <th>Query</th>
+            <th>When</th>
+            
+        </tr>
     
     </thead>
     
     <tbody>
 
-	<?php
+    <?php
     
         $stmt = $db->query("SELECT TrafficCustom.Id, TrafficCustom.Query, TrafficCustom.Time
-							FROM TrafficCustom
+                            FROM TrafficCustom
                             WHERE TrafficCustom.Time > NOW() - INTERVAL 1 MONTH
-							ORDER BY TrafficCustom.Time DESC
-							LIMIT 10");
+                            ORDER BY TrafficCustom.Time DESC
+                            LIMIT 10");
                           
         while($row = $stmt->fetch()) echo "<tr><td><a href=\"" . ROOT . "traffic/{$row['Id']}\">" . nl2br(charLimit($row['Query'], 100)) . "</a></td><td>" . datetime($row['Time']) . "</td></tr>";
     
     ?>
 
-	</tbody>
+    </tbody>
     
 </table>
 
@@ -176,37 +176,37 @@
 
 <table class="sortable">
 
-	<thead>
-	
-		<tr>
-		
-			<th>Region</th>
-			<th>Requests</th>
-			
-		</tr>
+    <thead>
+    
+        <tr>
+        
+            <th>Region</th>
+            <th>Requests</th>
+            
+        </tr>
     
     </thead>
     
     <tbody>
 
-	<?php
+    <?php
     
         $stmt = $db->query("SELECT Value, COUNT(*) Count
-							FROM Traffic
-							INNER JOIN TrafficCustom
-							ON TrafficCustom.`TrafficId` = Traffic.`Id`
-							INNER JOIN TrafficIp
-							ON TrafficIp.`Id` = Traffic.`IpId`
+                            FROM Traffic
+                            INNER JOIN TrafficCustom
+                            ON TrafficCustom.`TrafficId` = Traffic.`Id`
+                            INNER JOIN TrafficIp
+                            ON TrafficIp.`Id` = Traffic.`IpId`
                             WHERE TrafficCustom.Time > NOW() - INTERVAL 1 MONTH
-							GROUP BY Value
-							ORDER BY Count DESC, TrafficCustom.Time");
-							
-		$cities = array();                            
+                            GROUP BY Value
+                            ORDER BY Count DESC, TrafficCustom.Time");
+                            
+        $cities = array();                            
         while($row = $stmt->fetch()) echo "<tr><td>" . regionFromIp($row['Value']) . "</td><td>{$row['Count']}</td></tr>";
     
     ?>
 
-	</tbody>
+    </tbody>
     
 </table>
 
@@ -214,36 +214,36 @@
 
 <table class="sortable">
 
-	<thead>
-	
-		<tr>
-		
-			<th>Region</th>
-			<th>Requests</th>
-			
-		</tr>
+    <thead>
+    
+        <tr>
+        
+            <th>Region</th>
+            <th>Requests</th>
+            
+        </tr>
     
     </thead>
     
     <tbody>
 
-	<?php
+    <?php
     
         $stmt = $db->query("SELECT Value, COUNT(*) Count
-							FROM Traffic
-							INNER JOIN TrafficMalicious
-							ON TrafficMalicious.`TrafficId` = Traffic.`Id`
-							INNER JOIN TrafficIp
-							ON TrafficIp.`Id` = Traffic.`IpId`
+                            FROM Traffic
+                            INNER JOIN TrafficMalicious
+                            ON TrafficMalicious.`TrafficId` = Traffic.`Id`
+                            INNER JOIN TrafficIp
+                            ON TrafficIp.`Id` = Traffic.`IpId`
                             WHERE TrafficMalicious.Time > NOW() - INTERVAL 1 MONTH
-							GROUP BY Value
-							ORDER BY Count DESC, TrafficMalicious.Time");
-							                           
+                            GROUP BY Value
+                            ORDER BY Count DESC, TrafficMalicious.Time");
+                                                       
         while($row = $stmt->fetch()) echo "<tr><td>" . regionFromIp($row['Value']) . "</td><td>{$row['Count']}</td></tr>";
     
     ?>
 
-	</tbody>
+    </tbody>
     
 </table>
 

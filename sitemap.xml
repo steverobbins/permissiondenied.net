@@ -2,24 +2,24 @@
 <urlset xmlns="http://www.google.com/schemas/sitemap/0.84"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.google.com/schemas/sitemap/0.84 http://www.google.com/schemas/sitemap/0.84/sitemap.xsd">
-	<url>
-		<loc>http://permissiondenied.net/</loc>
+    <url>
+        <loc>http://permissiondenied.net/</loc>
         <lastmod>2012-10-18</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>http://permissiondenied.net/identicon</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+    <url>
+        <loc>http://permissiondenied.net/identicon</loc>
         <lastmod>2012-10-18</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>1.0</priority>
-	</url>
-	<url>
-		<loc>http://permissiondenied.net/host-status</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://permissiondenied.net/host-status</loc>
         <lastmod>2012-10-18</lastmod>
-		<changefreq>monthly</changefreq>
-		<priority>1.0</priority>
-	</url>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
     <url>
         <loc>http://permissiondenied.net/jquery-type</loc>
         <lastmod>2012-10-18</lastmod>

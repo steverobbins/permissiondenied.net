@@ -1,5 +1,5 @@
 <h2>jQuery Type Effect Plugin</h2>
-		
+        
 <p id="cont"><span id="info"></span><span id="underline"></span></p>
 
 <p>See .js comments for documentation</p>
@@ -10,18 +10,18 @@
 
 <pre class="codesample" data-lang="javascript">
 var myStrings = new Array(
-	'Neo...',
-	'&lt;br />Wake up, Neo.',
-	'&lt;br />The Matrix has you.'
+    'Neo...',
+    '&lt;br />Wake up, Neo.',
+    '&lt;br />The Matrix has you.'
 ),
 myOptions = {
-	charDelay: 100,
-	stringDelay: 1000,
-	replace: false
+    charDelay: 100,
+    stringDelay: 1000,
+    replace: false
 };
 
-$('#consoleWindow').type(myStrings, myOptions, function() {	
-	alert("All done!");
+$('#consoleWindow').type(myStrings, myOptions, function() {    
+    alert("All done!");
 });
 </pre>
 

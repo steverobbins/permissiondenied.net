@@ -48,9 +48,9 @@ define("SQL_PASSWORD", "");
  * see include/global/side.php and include/code-samples/list.php
  */
 $codesamples = array(
-    'php-class-to-help-create-xml' => array('xmldoc.php', 'PHP Class to Help Create XML'),
-    'get-data-from-unknown-mysql-database' => array( 'unknowndb.php', 'Get All Data from Unknown Structure of MySQL Database'),
-    'show-all-images-in-directory' => array( 'allimages.php', 'Recursively Loop Through Directory and Show All Images')    
+	'php-class-to-help-create-xml' => array('xmldoc.php', 'PHP Class to Help Create XML'),
+	'get-data-from-unknown-mysql-database' => array( 'unknowndb.php', 'Get All Data from Unknown Structure of MySQL Database'),
+	'show-all-images-in-directory' => array( 'allimages.php', 'Recursively Loop Through Directory and Show All Images')	
 );
 
 /**
@@ -59,8 +59,8 @@ $codesamples = array(
  * see error.php
  */
 $httpcodes = array(
-    403 => "Forbidden<br />You are not allowed to do that.",
-    404 => "Sorry, we couldn't find what you're looking for."
+	403 => "Forbidden<br />You are not allowed to do that.",
+	404 => "Sorry, we couldn't find what you're looking for."
 );
 
 /**
@@ -69,9 +69,9 @@ $httpcodes = array(
  * see include/function.traffic.php
  */
 $allowedtables = array(
-    "Traffic",
-    "TrafficAgent",
-    "TrafficPage"
+	"Traffic",
+	"TrafficAgent",
+	"TrafficPage"
 );
 
 define("MAX_USER_QUERY_LIMIT", 30);

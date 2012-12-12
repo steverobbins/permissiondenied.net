@@ -27,11 +27,11 @@ try {
  * Analytics
  */
 $stmt = $db->prepare("INSERT INTO Traffic (AgentId, IpId, PageId, SessionId, Time)
-					VALUES (?, ?, ?, ?, NOW())");
+                    VALUES (?, ?, ?, ?, NOW())");
 $stmt->execute(array(
-	trafficId("TrafficAgent", $_SERVER["HTTP_USER_AGENT"]),
-	trafficId("TrafficIp", $_SERVER["REMOTE_ADDR"]),
-	trafficId("TrafficPage", $_SERVER["SCRIPT_URL"]),
-	trafficId("TrafficSession", $_COOKIE["PHPSESSID"])
+    trafficId("TrafficAgent", $_SERVER["HTTP_USER_AGENT"]),
+    trafficId("TrafficIp", $_SERVER["REMOTE_ADDR"]),
+    trafficId("TrafficPage", $_SERVER["SCRIPT_URL"]),
+    trafficId("TrafficSession", $_COOKIE["PHPSESSID"])
 ));
 $_SESSION['traffic'] = $db->lastInsertId();

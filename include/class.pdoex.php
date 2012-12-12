@@ -1,7 +1,7 @@
 <?php
 
 class PDOEx extends PDO {
-	
+    
     private $queryCounter = 0;
 
     /**
@@ -10,7 +10,7 @@ class PDOEx extends PDO {
      * @param string $query
      */
     public function query($query) {
-		
+        
         $this->queryCounter++;
         return parent::query($query);
     }
@@ -21,7 +21,7 @@ class PDOEx extends PDO {
      * @param string $statement
      */
     public function prepare($statement) {
-		
+        
         $this->queryCounter++;
         return parent::prepare($statement);
     }
@@ -32,7 +32,7 @@ class PDOEx extends PDO {
      * @return void
      */
     public function queryCount() {
-		
+        
         return $this->queryCounter;
     }
 }
