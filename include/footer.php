@@ -1,6 +1,6 @@
 <div id="footer">
 
-    <p id="badges">
+    <?php /*<p id="badges">
     
         <a href="http://validator.w3.org/check?uri=referer" target="_blank"><img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" title="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
         
@@ -12,7 +12,7 @@
 
     <a style="width:89px;height:31px;background:transparent url(//ajax.cloudflare.com/cdn-cgi/custom/images/badges-gray.png) no-repeat -482px -0px;display:inline-block"></a>
         
-    </p>
+    </p>*/ ?>
     
     <p>This work by <a href="http://permissiondenied.net/contact">Steven Robbins</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a><br />Based on a work at <a href="http://permissiondenied.net">http://permissiondenied.net</a> and <a href="http://pd-cdn.net">http://pd-cdn.net</a>.</p>
     

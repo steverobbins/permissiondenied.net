@@ -1,0 +1,1 @@
+These filesfolders are copied to pd-cdn.net's root directory
