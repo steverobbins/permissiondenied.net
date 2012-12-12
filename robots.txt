@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /include
+Disallow: /bad-browser.php
+
+Sitemap: http://permissiondenied.net/sitemap.xml
