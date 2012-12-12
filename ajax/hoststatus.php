@@ -8,8 +8,6 @@ if (isset($_POST['host'])) {
     
     $response = '<div>';
     
-    $ourIps = array();
-    
     $levels = array('01d33b', '46dc2b', 'a6e815', 'f6ea02', 'ffcb00', 'ff9300', 'fa7604', 'f3550a', 'ec3310', 'e51415');
     
     $startTime = microtime(true);
@@ -42,8 +40,7 @@ if (isset($_POST['host'])) {
                 
                 foreach (array_reverse($responses) as $r) {
                     
-                    if (!isset($r['fields']['LOCATION']))
-                        break;
+                    if (!isset($r['fields']['LOCATION'])) break;
                         
                     $location = $r['fields']['LOCATION'];
                     $code = $r['status']['code'];
@@ -58,10 +55,7 @@ if (isset($_POST['host'])) {
             $level = $tripTime > 2 ? 4 : ($tripTime > 1.5 ? 3 :($tripTime > 1 ? 2 : ($tripTime > 0.5 ? 2 : 0)));
             $response .= 'Domain is pointing to <b>' . $destinationIp . '</b>.<br />';
         }
-        else {
-            
-            $level = 8;
-        }
+        else $level = 8;
         
         $response .= '<strong>Status: ' . $responses[0]['status']['code'] . " " . $responses[0]['status']['phrase'] . '</strong>';
     }
@@ -70,13 +64,9 @@ if (isset($_POST['host'])) {
         $level = 9;
         $response .= '<strong>Could not find host.</strong>';
     }
-    
-    //////////////////////////////////////////////////////////
         
     echo json_encode(array("level" => $levels[$level],
                             "status" => $level,
                             "host" => $_POST['host'],
                             "response" => $response . "</div>"));
-    
-    unset($output, $status);
 }
