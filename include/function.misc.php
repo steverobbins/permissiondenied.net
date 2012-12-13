@@ -102,20 +102,18 @@ function trafficId($table, $value) {
                     
     $stmt->execute(array((string)$value));
     
-    if ($stmt->rowCount() < 1) {
-        
-        $stmt = $db->prepare("INSERT INTO $table (Value)
-                        VALUES (?)");
-        
-        $stmt->execute(array((string)$value));
-        
-        return $db->lastInsertId();
-    }
-    else {
+    if ($stmt->rowCount() == 0) {
         
         $row = $stmt->fetch();        
         return $row['Id'];
     }
+        
+    $stmt = $db->prepare("INSERT INTO $table (Value)
+                    VALUES (?)");
+    
+    $stmt->execute(array((string)$value));
+    
+    return $db->lastInsertId();
 }
 
 /**
