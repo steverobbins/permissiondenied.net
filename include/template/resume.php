@@ -1,7 +1,7 @@
 <h2>Experience:</h2>
 
 <h3><em> EYEMAGINE Technology, LLC</em> | October 2012 - Present</h3>
-<h4>Software Engineer</h4>
+<h4>Software Developer</h4>
 
 <h3><em>Rayhawk Corporation</em> | December 2010 - October 2012</h3>
 <h4>Web Programming, Server Management</h4>
