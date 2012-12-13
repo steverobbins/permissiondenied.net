@@ -6,7 +6,7 @@
 ini_set("display_errors", 1);
 
 /**
- * Several useful URL related resource used globally.
+ * Several useful URL related resources used globally.
  */
 define("ROOT", "/");
 define("WEB_ROOT", "http://www.google.com" . ROOT);
