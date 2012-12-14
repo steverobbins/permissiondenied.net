@@ -43,7 +43,7 @@
         
         </style>
         
-        <?php include 'include/head.php' ?>
+        <?php include 'include/template/head.php' ?>
         
         <meta name="description" content="A simple API to create an identicon bashed on a hash string." />
         

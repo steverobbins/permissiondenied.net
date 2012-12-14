@@ -15,7 +15,7 @@
         
         </style>
         
-        <?php include 'include/head.php' ?>
+        <?php include 'include/template/head.php' ?>
         
         <script type="text/javascript" src="<?=version('js/jquery.tablesorter.js', true)?>"></script>
     

@@ -23,7 +23,7 @@
         
         <link rel="stylesheet" type="text/css" href="<?=version('css/isotope.css', true)?>" />
         
-        <?php include 'include/head.php' ?>
+        <?php include 'include/template/head.php' ?>
         
         <script type="text/javascript" src="<?=version('js/isotope.js', true)?>"></script>
         <script type="text/javascript" src="<?=version('js/jquery.color.js', true)?>"></script>

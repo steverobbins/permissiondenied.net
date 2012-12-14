@@ -5,7 +5,7 @@
     
         <title>Privacy Policy - <?=SITE_NAME?></title>
         
-        <?php include 'include/head.php' ?>
+        <?php include 'include/template/head.php' ?>
     
     </head>
     

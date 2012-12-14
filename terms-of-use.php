@@ -5,7 +5,7 @@
     
         <title>Web Site Terms and Conditions of Use - <?=SITE_NAME?></title>
         
-        <?php include 'include/head.php' ?>
+        <?php include 'include/template/head.php' ?>
     
     </head>
     

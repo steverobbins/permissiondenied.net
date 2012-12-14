@@ -1,5 +1,5 @@
 <link type="text/css" rel="stylesheet" href="<?=version("css/normalize.css", true)?>" />
-<link type="text/css" rel="stylesheet" href="<?=version("css/global.css", true)?>" />
+<link type="text/css" rel="stylesheet" href="<?=ROOT?>css/global.css" />
 <link type="text/css" rel="stylesheet" href="<?=version("css/highlight.css", true)?>" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

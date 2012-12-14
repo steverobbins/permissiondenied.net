@@ -85,7 +85,7 @@ RewriteRule ^(.*)\.[\d]{10}\.(js|png|jpeg|jpg|gif)$ $1.$2 [L]
  # Generic seo
  ##
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /[a-z0-9-]+\.php
-#RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^([a-z0-9-]+)\.php$ $1 [R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-d
