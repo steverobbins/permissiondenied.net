@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Options +FollowSymLinks
 RewriteEngine On
 RewriteBase /
@@ -101,3 +102,108 @@ RewriteRule ^identicon/hash/([0-9]+)/(.*)\.png$ identicon.php?imageSize=$1&hashT
 
 RewriteRule ^traffic/([0-9]+)$ traffic.php?custom=$1 [L]
 RewriteRule ^code-samples/([a-zA-Z0-9-]+)$ code-samples.php?r=$1 [L]
+=======
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+###########################
+ # Remove www prefix
+ ##
+RewriteCond %{HTTP_HOST} ^www.permissiondenied.net$ [NC]
+RewriteRule ^(.*)$ http://permissiondenied.net/$1 [R=301,L]
+
+
+###########################
+ # Error handling
+ ##
+ErrorDocument 403 /error.php?e=403
+ErrorDocument 404 /error.php?e=404
+
+
+###########################
+ # Optimization settings
+ #
+ # Cache images and flash content for one month
+ ##
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf)$">
+Header set Cache-Control "max-age=2592000"
+</FilesMatch>
+
+
+###########################
+ # Cache text, css, and javascript files for one week
+ ##
+<FilesMatch ".(js|css|pdf|txt)$">
+Header set Cache-Control "max-age=604800"
+</FilesMatch>
+
+
+###########################
+ # Compress text, html, javascript, css, xml
+ ##
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+
+###########################
+ # Fix known 404s
+ ##
+RewriteRule ^jquery-type-plugin$ jquery-type [R=301]
+RewriteRule ^jquery-type-plugin\.php$ jquery-type [R=301]
+RewriteRule ^identicon/index\.php$ identicon [R=301]
+RewriteRule ^magento/(.*)$ http://magento.permissiondenied.net/$1 [R=301]
+RewriteRule ^magento/?$ http://magento.permissiondenied.net [R=301]
+
+
+###########################
+ # Remove trailing slash on non-directories
+ ##
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ $1 [L,R=301]
+
+
+###########################
+ # Move /index.php to /
+ ##
+RewriteRule (.*)/index(\.[a-zA-Z]+)*$ $1 [L,R=301]
+
+
+###########################
+ # Version control magic
+ ##
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)\.([\d]{10})\.(css)$ createfile.php?file=$1&ext=$3&stamp=$2 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)\.[\d]{10}\.(js|png|jpeg|jpg|gif)$ $1.$2 [L]
+
+
+###########################
+ # Generic seo
+ ##
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /[a-z0-9-]+\.php
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^([a-z0-9-]+)\.php$ $1 [R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-z0-9-]+)$ $1.php [L]
+
+
+###########################
+ # App dependencies
+ ##
+RewriteRule ^identicon/([0-9]+)/(.*)\.png$ identicon.php?size=$1&hash=$2 [L]
+RewriteRule ^identicon/hash/([0-9]+)/(.*)\.png$ identicon.php?imageSize=$1&hashText=$2&hashValue=1
+
+RewriteRule ^traffic/([0-9]+)$ traffic.php?custom=$1 [L]
+RewriteRule ^code-samples/([a-zA-Z0-9-]+)$ code-samples.php?r=$1 [L]
+>>>>>>> d4db6742da60c90c140a6c394af75e73afec91f4
