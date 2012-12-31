@@ -96,10 +96,7 @@ function trafficTrack() {
 function trafficId($table, $value) {
     
     global $db;
-<<<<<<< HEAD
-=======
     
->>>>>>> d4db6742da60c90c140a6c394af75e73afec91f4
     $stmt = $db->prepare("SELECT Id
                         FROM $table
                         WHERE Value = ?");
