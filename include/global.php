@@ -3,7 +3,6 @@
 session_start();
 
 include 'config.php';
-include 'class.site.php';
 include 'class.pdoex.php';
 include 'function.misc.php';
 
@@ -36,5 +35,3 @@ $stmt->execute(array(
     trafficId("TrafficSession", $_COOKIE["PHPSESSID"])
 ));
 $_SESSION['traffic'] = $db->lastInsertId();
-
-echo Site::test();
