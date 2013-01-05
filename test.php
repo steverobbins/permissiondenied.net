@@ -6,7 +6,8 @@ final class Site {
 
     public function var() {
 
-        return self::$var;
+        //return self::$var;
+        return "no";
     }
 }
 
