@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Turn on error reporting. I'm not afraid.
+ * Turn on error reporting.
  */
 ini_set("display_errors", 1);
 
