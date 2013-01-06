@@ -1,14 +1,15 @@
 <?php
 
+define("VALUE", "Hello.");
+
 final class Site {
 
-    private $var = "hello";
+    private $value = VALUE;
 
-    public function var() {
+    public function getValue() {
 
-        //return self::$var;
-        return "no";
+        return $this->value;
     }
 }
 
-echo Site::var();
+echo Site::getValue();
