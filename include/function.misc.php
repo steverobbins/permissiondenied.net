@@ -103,7 +103,7 @@ function trafficId($table, $value) {
                     
     $stmt->execute(array((string)$value));
     
-    if ($stmt->rowCount() == 0) {
+    if ($stmt->rowCount() != 0) {
         
         $row = $stmt->fetch();        
         return $row['Id'];
