@@ -250,10 +250,10 @@
 <?php endif ?>
 
 <h3>Or Entry Your Own Query</h3>
-
+<?php /*
 <p>See Examples:</p>
 
-<?php include 'include/template/traffic/list.php' ?>
+<?php include 'include/template/traffic/list.php'*/ ?>
 
 <?php include 'include/template/traffic/form.php' ?>
 
