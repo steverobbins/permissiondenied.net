@@ -12,7 +12,7 @@
     
         <li><a href="<?=ROOT?>traffic">Custom Analytics</a>
         
-            <?php //include 'include/template/traffic/list.php' ?>
+            <?php include 'include/template/traffic/list.php' ?>
         
         </li>
     
