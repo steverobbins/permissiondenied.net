@@ -38,7 +38,11 @@
                     include 'include/template/code-samples/sample.php';
                     include 'include/template/global/comments-large.php';
                 }
-                else include 'include/template/global/404.php';
+                else {
+
+                    header("HTTP/1.0 404 Not Found");
+                    include 'include/template/global/404.php';
+                }
             }
             else include 'include/template/code-samples/list.php';
             

@@ -39,7 +39,11 @@
                             
         $stmt->execute(array($_GET['custom']));
         
-        if ($stmt->rowCount() < 1) $page = "include/template/global/404.php";
+        if ($stmt->rowCount() < 1) {
+            
+            header("HTTP/1.0 404 Not Found");
+            $page = "include/template/global/404.php";
+        }
         else {
                             
             $row = $stmt->fetch();        
