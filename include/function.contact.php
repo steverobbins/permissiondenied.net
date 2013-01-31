@@ -31,6 +31,6 @@ function sendContact() {
     email(SITE_EMAIL, "New message from " . $_POST['email'], $_POST['message']);
     
     message("Your message has been sent.", true);
-    header("Location: " . ROOT . "contact");
+    header("Location: " . BASE . "contact");
     exit;
 }

@@ -6,7 +6,7 @@ notPublic();
 
 ini_set("display_errors", 1);
 
-$file = file_get_contents($_SERVER["DOCUMENT_ROOT"] ."/" . $_GET['file'] . "." . $_GET['ext']);
+$file = file_get_contents($_SERVER["DOCUMENT_BASE"] ."/" . $_GET['file'] . "." . $_GET['ext']);
 
 $new = $_GET['file'] . "." . $_GET['stamp'] . "." . $_GET['ext'];
 

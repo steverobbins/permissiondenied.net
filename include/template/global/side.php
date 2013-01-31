@@ -4,19 +4,19 @@
     
     <ul>
     
-        <li><a href="<?=ROOT?>jquery-type">jQuery Type Plugin</a></li>
+        <li><a href="<?=BASE?>jquery-type">jQuery Type Plugin</a></li>
     
-        <li><a href="<?=ROOT?>identicon">PHP Identicon Generator</a></li>
+        <li><a href="<?=BASE?>identicon">PHP Identicon Generator</a></li>
     
-        <li><a href="<?=ROOT?>host-status">Host/Domain Status</a></li>
+        <li><a href="<?=BASE?>host-status">Host/Domain Status</a></li>
     
-        <li><a href="<?=ROOT?>traffic">Custom Analytics</a>
+        <li><a href="<?=BASE?>traffic">Custom Analytics</a>
         
             <?php include 'include/template/traffic/list.php' ?>
         
         </li>
     
-        <li><a href="<?=ROOT?>htaccess-file"><?=SITE_NAME?>'s .htaccess File</a></li>
+        <li><a href="<?=BASE?>htaccess-file"><?=SITE_NAME?>'s .htaccess File</a></li>
     
     </ul>
     
@@ -26,9 +26,9 @@
     
     <ul>
     
-        <li><a href="<?=ROOT?>resume">Resume</a></li>
+        <li><a href="<?=BASE?>resume">Resume</a></li>
     
-        <li><a href="<?=ROOT?>contact">Contact</a></li>
+        <li><a href="<?=BASE?>contact">Contact</a></li>
     
     </ul-->
 

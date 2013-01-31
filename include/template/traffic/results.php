@@ -1,4 +1,4 @@
-<h2><a href="<?=ROOT?>traffic">Custom Analytics</a> - Query</h2>
+<h2><a href="<?=BASE?>traffic">Custom Analytics</a> - Query</h2>
 
 <pre class="codesample"><?=$row['Query']?></pre>
 

@@ -50,7 +50,7 @@
                             
         while($row = $stmt->fetch()) {
             
-            echo "<tr><td>{$row['Count']}</td><td><a href=\"" . WEB_ROOT . substr($row['Value'], 1) . "\" target=\"_blank\">{$row['Value']}</a></td><td>" . datetime($row['Time']) . "</td></tr>";
+            echo "<tr><td>{$row['Count']}</td><td><a href=\"" . WEB_BASE . substr($row['Value'], 1) . "\" target=\"_blank\">{$row['Value']}</a></td><td>" . datetime($row['Time']) . "</td></tr>";
         }
     
     ?>
@@ -164,7 +164,7 @@
                             ORDER BY TrafficCustom.Time DESC
                             LIMIT 10");
                           
-        while($row = $stmt->fetch()) echo "<tr><td><a href=\"" . ROOT . "traffic/{$row['Id']}\">" . nl2br(charLimit($row['Query'], 100)) . "</a></td><td>" . datetime($row['Time']) . "</td></tr>";
+        while($row = $stmt->fetch()) echo "<tr><td><a href=\"" . BASE . "traffic/{$row['Id']}\">" . nl2br(charLimit($row['Query'], 100)) . "</a></td><td>" . datetime($row['Time']) . "</td></tr>";
     
     ?>
 

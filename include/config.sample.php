@@ -8,10 +8,10 @@ ini_set("display_errors", 1);
 /**
  * Several useful URL related resources used globally.
  */
-define("ROOT", "/");
-define("WEB_ROOT", "http://www.google.com" . ROOT);
-define("NICE_URL", "Google.com" . ROOT);
-define("SERVER_ROOT", "/home/www/google.com" . ROOT);
+define("BASE", "/");
+define("WEB_BASE", "http://www.google.com" . BASE);
+define("NICE_URL", "Google.com" . BASE);
+define("SERVER_BASE", "/home/www/google.com" . BASE);
 define("CDN", "http://mycdn.com/");
 
 /**

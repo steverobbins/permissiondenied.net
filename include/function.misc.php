@@ -12,24 +12,24 @@ function version($file, $cdn = false) {
     
     if ($cdn) {
     
-        $rootfile = ROOT . "cdn/" . $file;
+        $rootfile = BASE . "cdn/" . $file;
         
-        if (!file_exists(SERVER_ROOT . $rootfile))
+        if (!file_exists(SERVER_BASE . $rootfile))
             return $file;
 
         //return CDN . $file;
         
-        $mtime = filemtime(SERVER_ROOT . $rootfile);
+        $mtime = filemtime(SERVER_BASE . $rootfile);
         
         return CDN . preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $file);
     }
     
-    //return $file = ROOT . $file;
+    //return $file = BASE . $file;
     
-    if (!file_exists(SERVER_ROOT . $file))
+    if (!file_exists(SERVER_BASE . $file))
         return $file;
     
-    $mtime = filemtime(SERVER_ROOT . $file);
+    $mtime = filemtime(SERVER_BASE . $file);
     return preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $file);
 }
 

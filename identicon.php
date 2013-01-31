@@ -4,7 +4,7 @@
     
     if (isset($_GET['hashText'])) {
         
-        header("Location: " . ROOT . "identicon/" . (!empty($_GET['imageSize']) ? ((int)$_GET['imageSize'] <= 0 ? 32 : $_GET['imageSize']) : 32) . "/" . (isset($_GET['hashValue']) ? md5($_GET['hashText']) : $_GET['hashText']) . '.png');
+        header("Location: " . BASE . "identicon/" . (!empty($_GET['imageSize']) ? ((int)$_GET['imageSize'] <= 0 ? 32 : $_GET['imageSize']) : 32) . "/" . (isset($_GET['hashValue']) ? md5($_GET['hashText']) : $_GET['hashText']) . '.png');
     }
 
     if (isset($_GET['hash'])) {

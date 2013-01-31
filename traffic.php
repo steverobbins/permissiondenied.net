@@ -22,7 +22,7 @@
             $stmt->execute(array($db->lastInsertId()));                
             $row = $stmt->fetch();
             
-            header("Location: " . ROOT . "traffic/" . $row['Id']);
+            header("Location: " . BASE . "traffic/" . $row['Id']);
             exit;
         }
         else logBadQuery();
