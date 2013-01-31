@@ -33,7 +33,7 @@
             
                 $path = 'include/template/code-samples/' . @$codesamples[$_GET['r']][0];
             
-                if (file_exists(SERVER_BASE . $path)) {
+                if (file_exists(SERVER_ROOT . $path)) {
                     
                     include 'include/template/code-samples/sample.php';
                     include 'include/template/global/comments-large.php';

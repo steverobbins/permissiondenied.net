@@ -14,22 +14,22 @@ function version($file, $cdn = false) {
     
         $rootfile = BASE . "cdn/" . $file;
         
-        if (!file_exists(SERVER_BASE . $rootfile))
+        if (!file_exists(SERVER_ROOT . $rootfile))
             return $file;
 
         //return CDN . $file;
         
-        $mtime = filemtime(SERVER_BASE . $rootfile);
+        $mtime = filemtime(SERVER_ROOT . $rootfile);
         
         return CDN . preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $file);
     }
     
     //return $file = BASE . $file;
     
-    if (!file_exists(SERVER_BASE . $file))
+    if (!file_exists(SERVER_ROOT . $file))
         return $file;
     
-    $mtime = filemtime(SERVER_BASE . $file);
+    $mtime = filemtime(SERVER_ROOT . $file);
     return preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $file);
 }
 

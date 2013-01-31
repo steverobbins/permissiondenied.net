@@ -68,7 +68,7 @@ function cityGroup($cities, $ip, $count) {
  */
 function regionFromIp($ip) {
                             
-    $gi = geoip_open(SERVER_BASE . "include/GeoIP/geoip.dat", GEOIP_STANDARD);
+    $gi = geoip_open(SERVER_ROOT . "include/GeoIP/geoip.dat", GEOIP_STANDARD);
             
     $geoip = geoip_record_by_addr($gi, $ip);
     

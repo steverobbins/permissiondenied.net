@@ -11,7 +11,7 @@ ini_set("display_errors", 1);
 define("BASE", "/");
 define("WEB_BASE", "http://www.google.com" . BASE);
 define("NICE_URL", "Google.com" . BASE);
-define("SERVER_BASE", "/home/www/google.com" . BASE);
+define("SERVER_ROOT", "/home/www/google.com" . BASE);
 define("CDN", "http://mycdn.com/");
 
 /**
