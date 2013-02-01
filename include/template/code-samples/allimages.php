@@ -8,7 +8,6 @@ function scanDirectoryImages($directory) {
     
     if (is_readable($directory) && (file_exists($directory) || is_dir($directory))) {
         
-        $directoryTree = array();
         $directoryList = opendir($directory);
         
         while($file = readdir($directoryList)) {
