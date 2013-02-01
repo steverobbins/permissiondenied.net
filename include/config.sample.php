@@ -1,24 +1,24 @@
 <?php
 
 /**
- * Turn on error reporting.
+ * Turn on error reporting. I'm not afraid.
  */
 ini_set("display_errors", 1);
 
 /**
- * Several useful URL related resources used globally.
+ * Several useful URL related resource used globally.
  */
 define("BASE", "/");
-define("WEB_BASE", "http://www.google.com" . BASE);
-define("NICE_URL", "Google.com" . BASE);
-define("SERVER_ROOT", "/home/www/google.com" . BASE);
-define("CDN", "http://mycdn.com/");
+define("WEB_ROOT", "http://permissiondenied.net" . BASE);
+define("NICE_URL", "PermissionDenied.net");
+define("SERVER_ROOT", "/path/to/permissiondenied.net/");
+define("CDN", "http://pd-cdn.net/");
 
 /**
  * Contact information and other display info.
  */
-define("SITE_NAME", "Google Inc");
-define("SITE_EMAIL", "emailme@example.com");
+define("SITE_NAME", "Permission Denied");
+define("SITE_EMAIL", "email@example.com");
 
 /**
  * Used to calculate page render time in footer.
@@ -38,7 +38,7 @@ define("CURRENT_URL", "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
  * MySQL connection info.
  */
 define("SQL_TYPE", "mysql");
-define("SQL_HOST", "");
+define("SQL_HOST", "localhost");
 define("SQL_DATABASE", "");
 define("SQL_USER", "");
 define("SQL_PASSWORD", "");
@@ -48,9 +48,9 @@ define("SQL_PASSWORD", "");
  * see include/global/side.php and include/code-samples/list.php
  */
 $codesamples = array(
-    'php-class-to-help-create-xml' => array('xmldoc.php', 'PHP Class to Help Create XML'),
-    'get-data-from-unknown-mysql-database' => array( 'unknowndb.php', 'Get All Data from Unknown Structure of MySQL Database'),
-    'show-all-images-in-directory' => array( 'allimages.php', 'Recursively Loop Through Directory and Show All Images')    
+        'php-class-to-help-create-xml' => array('xmldoc.php', 'PHP Class to Help Create XML'),
+        'get-data-from-unknown-mysql-database' => array( 'unknowndb.php', 'Get All Data from Unknown Structure of MySQL Database'),
+        'show-all-images-in-directory' => array( 'allimages.php', 'Recursively Loop Through Directory and Show All Images')
 );
 
 /**
@@ -59,19 +59,19 @@ $codesamples = array(
  * see error.php
  */
 $httpcodes = array(
-    403 => "Forbidden<br />You are not allowed to do that.",
-    404 => "Sorry, we couldn't find what you're looking for."
+        403 => "Forbidden<br />You are not allowed to do that.",
+        404 => "Sorry, we couldn't find what you're looking for."
 );
 
 /**
  * Allowed tables for /traffic
- * 
+ *
  * see include/function.traffic.php
  */
 $allowedtables = array(
-    "Traffic",
-    "TrafficAgent",
-    "TrafficPage"
+        "Traffic",
+        "TrafficAgent",
+        "TrafficPage"
 );
 
 define("MAX_USER_QUERY_LIMIT", 30);

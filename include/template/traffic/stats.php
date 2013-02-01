@@ -50,7 +50,7 @@
                             
         while($row = $stmt->fetch()) {
             
-            echo "<tr><td>{$row['Count']}</td><td><a href=\"" . WEB_BASE . substr($row['Value'], 1) . "\" target=\"_blank\">{$row['Value']}</a></td><td>" . datetime($row['Time']) . "</td></tr>";
+            echo "<tr><td>{$row['Count']}</td><td><a href=\"" . WEB_ROOT . substr($row['Value'], 1) . "\" target=\"_blank\">{$row['Value']}</a></td><td>" . datetime($row['Time']) . "</td></tr>";
         }
     
     ?>

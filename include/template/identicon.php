@@ -6,7 +6,7 @@
         
         $s = 64;
         
-        echo '<img src="' . WEB_BASE . '/identicon/' . $s . '/' . md5(rand(0, 20)) . '.png" height="' . $s . '" width="' . $s . '" alt="" />';
+        echo '<img src="' . WEB_ROOT . '/identicon/' . $s . '/' . md5(rand(0, 20)) . '.png" height="' . $s . '" width="' . $s . '" alt="" />';
     }
 
 ?></p>
@@ -50,7 +50,7 @@ echo '&lt;img src="' . $src . '" height="' . $size . '" width="' . $size . '" al
 
     for ($i = 0; $i < 9; $i++) {
         
-        echo '<img src="' . WEB_BASE . '/identicon/' . $s . '/' . md5(rand(0, 20)) . '.png" height="' . $s . '" width="' . $s . '" alt="" />';
+        echo '<img src="' . WEB_ROOT . '/identicon/' . $s . '/' . md5(rand(0, 20)) . '.png" height="' . $s . '" width="' . $s . '" alt="" />';
     }
 
 ?></p>
