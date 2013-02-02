@@ -25,7 +25,7 @@ function browserGroup(array $browsers, $agent, $count) {
  */
 function browser($agent) {
     
-    if (preg_match("/bot|spider|w3c|validat|crawl|monitor|php/i", $agent) || empty($agent)) return "Bot/Spider";
+    //if (preg_match("/bot|spider|w3c|validat|crawl|monitor|php/i", $agent) || empty($agent)) return "Bot/Spider";
     if (preg_match("/Konqueror/", $agent)) return "Konqueror";
     if (preg_match("/SeaMonkey/", $agent)) return "SeaMonkey";
     if (preg_match("/Dillo/", $agent)) return "Dillo";
@@ -38,6 +38,7 @@ function browser($agent) {
     if (preg_match("/Chrome/", $agent)) return "Google Chrome";
     if (preg_match("/Firefox/", $agent)) return "Mozilla Firefox";
     if (preg_match("/Safari/", $agent)) return "Safari";
+    return "Bot/Spider";
     //return $agent;
 }
 
