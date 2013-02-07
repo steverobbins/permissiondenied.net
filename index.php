@@ -13,7 +13,7 @@
         
         </style>
         
-        <?php include 'include/template/head.php' ?>
+        <?php include 'include/template/global/head.php' ?>
         
         <meta name="description" content="PermissionDenied.net is the personal website of Steven Robbins.  It hosts any projects or apps that he decided to put online for the public.  Steve likes to experiment with new technologies and showcase his work." />
         

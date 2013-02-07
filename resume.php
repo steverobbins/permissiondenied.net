@@ -5,7 +5,7 @@
     
         <title>Resume of Steven Robbins - <?=SITE_NAME?></title>
         
-        <?php include 'include/template/head.php' ?>
+        <?php include 'include/template/global/head.php' ?>
     
     </head>
     
