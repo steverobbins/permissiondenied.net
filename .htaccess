@@ -56,6 +56,7 @@ RewriteRule ^jquery-type-plugin\.php$ jquery-type [R=301]
 RewriteRule ^identicon/index\.php$ identicon [R=301]
 RewriteRule ^magento/(.*)$ http://magento.permissiondenied.net/$1 [R=301]
 RewriteRule ^magento/?$ http://magento.permissiondenied.net [R=301]
+RewriteRule ^traffic/14$ traffic/list-of-browsers-and-their-varients [R=301]
 
 
 ###########################
