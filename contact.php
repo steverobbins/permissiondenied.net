@@ -22,7 +22,7 @@
         
         <link rel="stylesheet" type="text/css" href="<?=version('css/form.css', true)?>" />
         
-        <?php include 'include/template/head.php' ?>
+        <?php include 'include/template/global/head.php' ?>
     
     </head>
     
