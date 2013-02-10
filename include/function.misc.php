@@ -10,9 +10,9 @@
  */
 function version($file, $cdn = false) {
     
-    if ($cdn) {
+    $rootfile = BASE . "cdn/" . $file;
     
-        $rootfile = BASE . "cdn/" . $file;
+    if ($cdn) {
         
         if (!file_exists(SERVER_ROOT . $rootfile))
             return $file;
@@ -26,11 +26,11 @@ function version($file, $cdn = false) {
     
     //return $file = BASE . $file;
     
-    if (!file_exists(SERVER_ROOT . $file))
-        return $file;
+    if (!file_exists(SERVER_ROOT . $rootfile))
+        return $rootfile;
     
-    $mtime = filemtime(SERVER_ROOT . $file);
-    return preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $file);
+    $mtime = filemtime(SERVER_ROOT . $rootfile);
+    return preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $rootfile);
 }
 
 /**
