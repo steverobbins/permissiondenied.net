@@ -4,7 +4,7 @@
 
 <p>See .js comments for documentation</p>
 
-<h2>Download: <a href="<?=version('js/jquery.type.js', true)?>">jquery.type.js</a></h2>
+<h2>Download: <a href="<?=version('js/jquery.type.js')?>">jquery.type.js</a></h2>
 
 <h3>Example</h3>
 
