@@ -3,6 +3,13 @@
 session_start();
 
 include 'config.php';
+
+/**
+ * Dynamically allocate base path
+ */
+$uri = reset(explode("?", preg_replace('/^' . preg_quote(ABS_BASE, '/') . '/', '', $_SERVER['REQUEST_URI'])));
+define("BASE", str_repeat("../", substr_count($uri, "/")));
+
 include 'class.pdoex.php';
 include 'function.misc.php';
 

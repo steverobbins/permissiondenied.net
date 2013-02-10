@@ -8,7 +8,7 @@ ini_set("display_errors", 1);
 /**
  * Several useful URL related resource used globally.
  */
-define("BASE", "/");
+define("ABS_BASE", "/");
 define("WEB_ROOT", "http://permissiondenied.net" . BASE);
 define("NICE_URL", "PermissionDenied.net");
 define("SERVER_ROOT", "/path/to/permissiondenied.net/");
