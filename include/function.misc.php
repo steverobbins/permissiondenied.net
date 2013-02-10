@@ -26,11 +26,11 @@ function version($file, $cdn = false) {
     
     //return $file = BASE . $file;
     
-    if (!file_exists(SERVER_ROOT . $rootfile))
-        return $rootfile;
+    if (!file_exists(SERVER_ROOT . $file))
+        return $file;
     
-    $mtime = filemtime(SERVER_ROOT . $rootfile);
-    return preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $rootfile);
+    $mtime = filemtime(SERVER_ROOT . $file);
+    return preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $file);
 }
 
 /**
