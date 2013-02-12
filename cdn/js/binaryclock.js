@@ -15,8 +15,7 @@ var classes = new Array(
     '.fourth',
     '.first, .fourth'
 ),
-time = {},
-times = new Array('.hour', '.minute', '.sec');
+time = {};
 
 function doTime() {
 
@@ -30,12 +29,10 @@ function doTime() {
 
     $(".hour, .minute, .sec").removeClass('active');
 
-    $(time).each(function(i) {
+    for (var thisTime in time) {
 
-        var t = $(this);
-
-        $(times[i]).filter('.one').filter(classes[Math.floor(t / 10)]).addClass('active');
-        $(times[i]).filter('.two').filter(classes[t % 10]).addClass('active');
+        $("." + thisTime).filter('.one').filter(classes[Math.floor(time[thisTime] / 10)]).addClass('active');
+        $("." + thisTime).filter('.two').filter(classes[time[thisTime] % 10]).addClass('active');
     });
 
     setTimeout(doTime, 1000);
