@@ -171,3 +171,11 @@
     </tr>
 
 </table>
+
+<div class="extras">
+
+    <span class="toggleHints">Toggle Hints</span>
+
+    <span class="toggleTime">Toggle Time</span>
+
+</div>

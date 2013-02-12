@@ -49,3 +49,7 @@ td {
 .hint > *, .time > * {
     display: none;
 }
+
+.hint > .active, .time > .active {
+    display: block;
+}

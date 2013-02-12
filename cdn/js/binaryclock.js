@@ -1,6 +1,16 @@
 $(document).ready(function() {
 
     doTime();
+
+    $(".toggleHints").click(function() {
+
+        $(".hint").toggleClass("active");
+    });
+
+    $(".toggleTime").click(function() {
+
+        $(".time").toggleClass("active");
+    });
 });
 
 var classes = new Array(
@@ -14,14 +24,13 @@ var classes = new Array(
     '.first, .second, .third',
     '.fourth',
     '.first, .fourth'
-),
-time = {};
+);
 
 function doTime() {
 
     var now = new Date().getTime() / 1000;
 
-    time = {
+    var time = {
         hour: parseInt(now / 3600) % 24,
         minute: parseInt(now / 60) % 60,
         sec: Math.round(now % 60)
@@ -34,6 +43,8 @@ function doTime() {
         $("." + thisTime).filter('.one').filter(classes[Math.floor(time[thisTime] / 10)]).addClass('active');
         $("." + thisTime).filter('.two').filter(classes[time[thisTime] % 10]).addClass('active');
     }
+
+    $('.time').text((time.hour < 10 ? "0" + time.hour : time.hour) + ":" + (time.minute < 10 ? "0" + time.minute : time.minute) + ":" + (time.sec < 10 ? "0" + time.sec : time.sec) + ":");
 
     setTimeout(doTime, 1000);
 }
