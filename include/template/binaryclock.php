@@ -32,6 +32,8 @@
 
     </tr>
 
+    <tr><td colspan="14"></td></tr>    
+
     <tr>
 
         <td class="space"></td>
@@ -63,6 +65,8 @@
         <td class="hint right"><p>4</p></td>
 
     </tr>
+
+    <tr><td colspan="14"></td></tr>    
 
     <tr>
 
@@ -96,6 +100,8 @@
 
     </tr>
 
+    <tr><td colspan="14"></td></tr>    
+
     <tr>
 
         <td class="space"></td>
@@ -128,6 +134,8 @@
 
     </tr>
 
+    <tr><td colspan="14"></td></tr>    
+
     <tr>
 
         <td class="space"></td>
@@ -159,5 +167,7 @@
         <td class="time bottom right"></td>
 
     </tr>
+
+    <tr><td colspan="14"></td></tr>    
 
 </table>

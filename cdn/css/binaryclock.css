@@ -4,6 +4,7 @@ html, body {
     width: 100%;
     padding: 0;
     background: black;
+    color: white;
 }
 
 table {
@@ -23,6 +24,7 @@ td {
 
 .hour, .minute, .sec, .empty {
     background: orange;
+    width: 12%;
 }
 
 .empty {
