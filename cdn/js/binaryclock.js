@@ -33,7 +33,7 @@ function doTime() {
 
         $("." + thisTime).filter('.one').filter(classes[Math.floor(time[thisTime] / 10)]).addClass('active');
         $("." + thisTime).filter('.two').filter(classes[time[thisTime] % 10]).addClass('active');
-    });
+    }
 
     setTimeout(doTime, 1000);
 }
