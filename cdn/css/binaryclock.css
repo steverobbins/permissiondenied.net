@@ -53,3 +53,10 @@ td {
 .hint > .active, .time > .active {
     display: block;
 }
+
+.extras {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}

@@ -166,7 +166,7 @@
 
         <td>&nbsp;</td>
 
-        <td class="time bottom right"></td>
+        <td class="time bottom right"><p></p></td>
 
     </tr>
 

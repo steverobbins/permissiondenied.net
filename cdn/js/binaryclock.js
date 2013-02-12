@@ -44,7 +44,7 @@ function doTime() {
         $("." + thisTime).filter('.two').filter(classes[time[thisTime] % 10]).addClass('active');
     }
 
-    $('.time').text((time.hour < 10 ? "0" + time.hour : time.hour) + ":" + (time.minute < 10 ? "0" + time.minute : time.minute) + ":" + (time.sec < 10 ? "0" + time.sec : time.sec) + ":");
+    $('.time p').text((time.hour < 10 ? "0" + time.hour : time.hour) + ":" + (time.minute < 10 ? "0" + time.minute : time.minute) + ":" + (time.sec < 10 ? "0" + time.sec : time.sec));
 
     setTimeout(doTime, 1000);
 }
