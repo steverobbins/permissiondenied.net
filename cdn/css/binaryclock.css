@@ -15,16 +15,15 @@ table {
 }
 
 td {
-
-}
-
-.space {
-
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .hour, .minute, .sec, .empty {
     background: orange;
     width: 12%;
+    height: 20%;
 }
 
 .empty {
