@@ -4,12 +4,12 @@
     <head>
     
         <title>jQuery Binary Clock - <?=SITE_NAME?></title>
-
-        <link rel="stylesheet" type="text/css" href="<?=BASE?>css/binaryclock.css">
         
         <?php include 'include/template/global/head.php' ?>
 
-        <script type="text/javascript" src="<?=BASE?>js/binaryclock.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?=version('css/binaryclock.css')?>">
+
+        <script type="text/javascript" src="<?=version('js/binaryclock.js')?>"></script>
     
     </head>
     

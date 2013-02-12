@@ -6,7 +6,15 @@ html, body {
     background: black;
 }
 
+table {
+    
+}
+
 .hour, .minute, .sec, .empty {
+
+}
+
+.empty {
 
 }
 
@@ -15,7 +23,7 @@ html, body {
 }
 
 .bottom {
-    
+
 }
 
 .hints {
