@@ -12,7 +12,8 @@ $(document).ready(function() {
         '.fourth',
         '.first, .fourth'
     ),
-    time = {};
+    time = {},
+    times = new Array('hour', 'minute', 'sec');
 
     function doTime() {
 
@@ -24,7 +25,19 @@ $(document).ready(function() {
             sec: Math.round(now % 60)
         }
 
-        console.log(time);
+        $(".hour, .minute., .sec").removeClass('active');
+
+        $(time).each(function(i) {
+
+            var t = $(this);
+
+            if (t < 10) $(times[i]).filter('.two').filter(classes[t]).addClass('active');
+            else {
+
+                $(times[i]).filter('.one').filter(classes[Math.floor(t / 10)]).addClass('active');
+                $(times[i]).filter('.two').filter(classes[t % 10]).addClass('active');
+            }
+        });
 
         setTimeout(doTime, 1000);
     }

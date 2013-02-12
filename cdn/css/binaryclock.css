@@ -29,10 +29,6 @@ td {
     background: orange;
 }
 
-.empty {
-    background: none;
-}
-
 .right {
     text-align: left;
 }
@@ -44,10 +40,6 @@ td {
 .hint {
     text-transform: uppercase;
     font-size: 7em;
-}
-
-.time {
-    
 }
 
 .hint.right {
