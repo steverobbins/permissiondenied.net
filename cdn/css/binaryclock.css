@@ -39,7 +39,9 @@ td {
 }
 
 .hint {
-    
+    text-transform: uppercase;
+    font-size: 7em;
+    text-align: center;
 }
 
 .time {
@@ -47,7 +49,7 @@ td {
 }
 
 .hint.right {
-    
+    width: 4%;
 }
 
 .hint.bottom {
