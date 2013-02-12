@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var classes = new array(
+    var classes = new Array(
         '',
         '.first',
         '.second',
@@ -28,4 +28,6 @@ $(document).ready(function() {
 
         setTimeout(doTime, 1000);
     }
+
+    doTime();
 });

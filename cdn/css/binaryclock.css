@@ -21,7 +21,6 @@ td {
 }
 
 .hour, .minute, .sec, .empty {
-    background: orange;
     width: 12%;
     height: 20%;
 }
