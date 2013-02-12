@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    background: black;
+    color: white;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.hour, .minute, .sec, .empty {
+    width: 12%;
+    height: 20%;
+}
+
+.hour.active, .minute.active, .sec.active {
+    background: orange;
+}
+
+.right {
+    text-align: left;
+}
+
+.bottom {
+    text-align: center;
+}
+
+.hint {
+    text-transform: uppercase;
+    font-size: 7em;
+}
+
+.hint.right {
+    width: 4%;
+}
+
+.hint > *, .time > * {
+    display: none;
+}
+
+.hint > .active, .time > .active {
+    display: block;
+}
+
+.extras {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}

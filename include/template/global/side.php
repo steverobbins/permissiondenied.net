@@ -6,6 +6,8 @@
     
         <li><a href="<?=BASE?>jquery-type">jQuery Type Plugin</a></li>
     
+        <li><a href="<?=BASE?>jquery-binary-clock">jQuery Binary Clock</a></li>
+    
         <li><a href="<?=BASE?>identicon">PHP Identicon Generator</a></li>
     
         <li><a href="<?=BASE?>host-status">Host/Domain Status</a></li>
