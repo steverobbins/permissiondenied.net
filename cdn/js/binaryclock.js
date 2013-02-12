@@ -28,12 +28,11 @@ var classes = new Array(
 
 function doTime() {
 
-    var now = new Date().getTime() / 1000;
-
-    var time = {
-        hour: parseInt(now / 3600) % 24,
-        minute: parseInt(now / 60) % 60,
-        sec: Math.ceil(now % 60)
+    var now = new Date(),
+    time = {
+        hour: now.getHours(),
+        minute: now.getMinutes(),
+        sec: now.getSeconds()
     }
 
     $(".hour.active, .minute.active, .sec.active").removeClass('active');
