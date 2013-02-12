@@ -26,22 +26,25 @@ td {
     height: 20%;
 }
 
+.hour.active, .minute.active, .sec.active {
+    background: orange;
+}
+
 .empty {
     background: none;
 }
 
 .right {
-
+    text-align: left;
 }
 
 .bottom {
-
+    text-align: center;
 }
 
 .hint {
     text-transform: uppercase;
     font-size: 7em;
-    text-align: center;
 }
 
 .time {
@@ -52,10 +55,6 @@ td {
     width: 4%;
 }
 
-.hint.bottom {
-    
-}
-
 .hint > *, .time > * {
-    /*display: none;*/
+    display: none;
 }
