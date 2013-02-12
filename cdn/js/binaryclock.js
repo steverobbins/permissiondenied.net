@@ -33,10 +33,10 @@ function doTime() {
     var time = {
         hour: parseInt(now / 3600) % 24,
         minute: parseInt(now / 60) % 60,
-        sec: Math.round(now % 60)
+        sec: Math.ceil(now % 60)
     }
 
-    $(".hour, .minute, .sec").removeClass('active');
+    $(".hour.active, .minute.active, .sec.active").removeClass('active');
 
     for (var thisTime in time) {
 
@@ -44,7 +44,16 @@ function doTime() {
         $("." + thisTime).filter('.two').filter(classes[time[thisTime] % 10]).addClass('active');
     }
 
-    $('.time p').text((time.hour < 10 ? "0" + time.hour : time.hour) + ":" + (time.minute < 10 ? "0" + time.minute : time.minute) + ":" + (time.sec < 10 ? "0" + time.sec : time.sec));
+    $('.time p').text(time.hour + ":" + strpad(time.minute, 2) + ":" + strpad(time.sec, 2));
 
     setTimeout(doTime, 1000);
+}
+
+function strpad(number, length) {
+   
+    var str = '' + number;
+
+    while (str.length < length) str = '0' + str;
+   
+    return str;
 }
