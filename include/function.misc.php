@@ -10,7 +10,7 @@
  */
 function version($file, $cdn = false) {
     
-    $rootfile = BASE . "cdn/" . $file;
+    $rootfile = ABS_BASE . "cdn/" . $file;
     
     if ($cdn) {
         
