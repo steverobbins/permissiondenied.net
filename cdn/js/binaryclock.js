@@ -13,7 +13,7 @@ $(document).ready(function() {
         '.first, .fourth'
     ),
     time = {},
-    times = new Array('hour', 'minute', 'sec');
+    times = new Array('.hour', '.minute', '.sec');
 
     function doTime() {
 
@@ -25,7 +25,7 @@ $(document).ready(function() {
             sec: Math.round(now % 60)
         }
 
-        $(".hour, .minute., .sec").removeClass('active');
+        $(".hour, .minute, .sec").removeClass('active');
 
         $(time).each(function(i) {
 
