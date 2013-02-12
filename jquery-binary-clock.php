@@ -7,9 +7,9 @@
         
         <?php include 'include/template/global/head.php' ?>
 
-        <link rel="stylesheet" type="text/css" href="<?=version('css/binaryclock.css')?>">
+        <link rel="stylesheet" type="text/css" href="<?=version('css/binaryclock.css', true)?>">
 
-        <script type="text/javascript" src="<?=version('js/binaryclock.js')?>"></script>
+        <script type="text/javascript" src="<?=version('js/binaryclock.js', true)?>"></script>
     
     </head>
     

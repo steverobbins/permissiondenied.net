@@ -14,7 +14,7 @@
 
         <td class="sec fourth two"></td>
 
-        <td class="hints right"></td>
+        <td class="hint right"></td>
 
     </tr>
 
@@ -32,7 +32,7 @@
 
         <td class="sec third two"></td>
 
-        <td class="hints right"></td>
+        <td class="hint right"></td>
 
     </tr>
 
@@ -50,7 +50,7 @@
 
         <td class="sec second two"></td>
 
-        <td class="hints right"></td>
+        <td class="hint right"></td>
 
     </tr>
 
@@ -68,23 +68,23 @@
 
         <td class="sec first two"></td>
 
-        <td class="hints right"></td>
+        <td class="hint right"></td>
 
-    </tr>>
+    </tr>
 
     <tr>
 
-        <td class="hints bottom"></td>
+        <td class="hint bottom"></td>
 
-        <td class="hints bottom"></td>
+        <td class="hint bottom"></td>
 
-        <td class="hints bottom"></td>
+        <td class="hint bottom"></td>
 
-        <td class="hints bottom"></td>
+        <td class="hint bottom"></td>
 
-        <td class="hints bottom"></td>
+        <td class="hint bottom"></td>
 
-        <td class="hints bottom"></td>
+        <td class="hint bottom"></td>
 
         <td class="time bottom right"></td>
 

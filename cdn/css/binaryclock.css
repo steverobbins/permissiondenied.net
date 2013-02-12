@@ -7,7 +7,7 @@ html, body {
 }
 
 table {
-    
+
 }
 
 .hour, .minute, .sec, .empty {
@@ -26,14 +26,26 @@ table {
 
 }
 
-.hints {
+.hint {
     
 }
 
-.hints.right {
+.time {
     
 }
 
-.hints.bottom {
+.hint.right {
+    
+}
+
+.hint.bottom {
+    
+}
+
+.hint > * {
+    
+}
+
+.time > * {
     
 }
