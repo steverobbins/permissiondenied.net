@@ -4,12 +4,12 @@ $(document).ready(function() {
 
     $(".toggleHints").click(function() {
 
-        $(".hint").toggleClass("active");
+        $(".hint p").toggleClass("active");
     });
 
     $(".toggleTime").click(function() {
 
-        $(".time").toggleClass("active");
+        $(".time p").toggleClass("active");
     });
 });
 
