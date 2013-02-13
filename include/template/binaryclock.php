@@ -178,6 +178,6 @@
 
     <span class="toggleTime">Toggle Time</span>
 
-    <span class="colorize">Toggle Time</span>
+    <span class="colorize">Colorize</span>
 
 </div>
