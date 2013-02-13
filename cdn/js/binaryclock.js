@@ -12,7 +12,10 @@ $(document).ready(function() {
         $(".time").toggleClass("active");
     });
 
-    $(".colorize").click(colorize);
+    $(".colorize").click(function() {
+        
+        colorize = true;
+    });
 });
 
 var classes = new Array(
@@ -26,7 +29,8 @@ var classes = new Array(
     '.first, .second, .third',
     '.fourth',
     '.first, .fourth'
-);
+),
+colorize = false;
 
 function doTime() {
 
@@ -46,6 +50,8 @@ function doTime() {
     }
 
     $('.time p').text(time.hour + ":" + strpad(time.minute, 2) + ":" + strpad(time.sec, 2));
+    
+    if (colorize) colorize();
 
     setTimeout(doTime, 1000);
 }
@@ -63,5 +69,5 @@ function colorize() {
 
     $('.hour.active, .minute.active, .sec.active').css("background",  'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')');
 
-    setTimeout(colorize, 50);
+    //setTimeout(colorize, 50); //too fantastic
 }
