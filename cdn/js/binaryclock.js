@@ -67,7 +67,7 @@ function strpad(number, length) {
 
 function doColors() {
 
-    $('.hou., .minute, .sec').removeAttr('style').filter('.active').css("background",  'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')');
+    $('.hour, .minute, .sec').removeAttr('style').filter('.active').css("background",  'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')');
 
     //setTimeout(colorize, 50); //too fantastic
 }
