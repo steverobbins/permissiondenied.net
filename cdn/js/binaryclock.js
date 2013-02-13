@@ -11,6 +11,8 @@ $(document).ready(function() {
 
         $(".time").toggleClass("active");
     });
+
+    $(".colorize").click(colorize);
 });
 
 var classes = new Array(
