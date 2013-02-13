@@ -62,5 +62,12 @@ td {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+.extras > * {
     cursor: pointer;
+}
+
+.extras > * + * {
+    margin-left: 20px;
 }
