@@ -56,3 +56,10 @@ function strpad(number, length) {
    
     return str;
 }
+
+function colorize() {
+
+    $('.hour.active, .minute.active, .sec.active').css("background",  'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')');
+
+    setTimeout(colorize, 50);
+}
