@@ -51,7 +51,7 @@ function doTime() {
 
     $('.time p').text(time.hour + ":" + strpad(time.minute, 2) + ":" + strpad(time.sec, 2));
     
-    if (colorize) colorize();
+    if (colorize) doColors();
 
     setTimeout(doTime, 1000);
 }
@@ -65,7 +65,7 @@ function strpad(number, length) {
     return str;
 }
 
-function colorize() {
+function doColors() {
 
     $('.hour.active, .minute.active, .sec.active').css("background",  'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')');
 
