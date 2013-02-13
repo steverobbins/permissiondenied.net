@@ -4,12 +4,17 @@ $(document).ready(function() {
 
     $(".toggleHints").click(function() {
 
-        $(".hint p").toggleClass("active");
+        $(".hint").toggleClass("active");
     });
 
     $(".toggleTime").click(function() {
 
-        $(".time p").toggleClass("active");
+        $(".time").toggleClass("active");
+    });
+
+    $(".colorize").click(function() {
+        
+        colorize = true;
     });
 });
 
@@ -24,19 +29,19 @@ var classes = new Array(
     '.first, .second, .third',
     '.fourth',
     '.first, .fourth'
-);
+),
+colorize = false;
 
 function doTime() {
 
-    var now = new Date().getTime() / 1000;
-
-    var time = {
-        hour: parseInt(now / 3600) % 24,
-        minute: parseInt(now / 60) % 60,
-        sec: Math.round(now % 60)
+    var now = new Date(),
+    time = {
+        hour: now.getHours(),
+        minute: now.getMinutes(),
+        sec: now.getSeconds()
     }
 
-    $(".hour, .minute, .sec").removeClass('active');
+    $(".hour.active, .minute.active, .sec.active").removeClass('active');
 
     for (var thisTime in time) {
 
@@ -44,7 +49,25 @@ function doTime() {
         $("." + thisTime).filter('.two').filter(classes[time[thisTime] % 10]).addClass('active');
     }
 
-    $('.time p').text((time.hour < 10 ? "0" + time.hour : time.hour) + ":" + (time.minute < 10 ? "0" + time.minute : time.minute) + ":" + (time.sec < 10 ? "0" + time.sec : time.sec));
+    $('.time p').text(time.hour + ":" + strpad(time.minute, 2) + ":" + strpad(time.sec, 2));
+    
+    if (colorize) doColors();
 
     setTimeout(doTime, 1000);
+}
+
+function strpad(number, length) {
+   
+    var str = '' + number;
+
+    while (str.length < length) str = '0' + str;
+   
+    return str;
+}
+
+function doColors() {
+
+    $('.hour.active, .minute.active, .sec.active').css("background",  'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')');
+
+    //setTimeout(colorize, 50); //too fantastic
 }
