@@ -30,7 +30,7 @@ td {
 }
 
 .hour.active, .minute.active, .sec.active {
-    background: orange;
+    background: #CCC;
 }
 
 .right {
