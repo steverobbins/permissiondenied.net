@@ -21,12 +21,16 @@ td {
 }
 
 .hour, .minute, .sec, .empty {
-    width: 12%;
+    width: 14%;
     height: 20%;
 }
 
+.hour, .minute, .sec {
+    background: #111;
+}
+
 .hour.active, .minute.active, .sec.active {
-    background: orange;
+    background: #CCC;
 }
 
 .right {
@@ -50,7 +54,7 @@ td {
     display: none;
 }
 
-.hint > .active, .time > .active {
+.hint.active > *, .time.active > * {
     display: block;
 }
 
@@ -58,5 +62,12 @@ td {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+.extras > * {
     cursor: pointer;
+}
+
+.extras > * + * {
+    margin-left: 20px;
 }

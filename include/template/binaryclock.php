@@ -10,7 +10,7 @@
 
         <td>&nbsp;</td>
 
-        <td class="hour fourth two"></td>
+        <td class="empty"></td>
 
         <td>&nbsp;</td>
 
@@ -44,7 +44,7 @@
 
         <td>&nbsp;</td>
 
-        <td class="hour third two"></td>
+        <td class="empty"></td>
 
         <td>&nbsp;</td>
 
@@ -177,5 +177,7 @@
     <span class="toggleHints">Toggle Hints</span>
 
     <span class="toggleTime">Toggle Time</span>
+
+    <span class="colorize">Colorize</span>
 
 </div>
