@@ -54,7 +54,7 @@ td {
     display: none;
 }
 
-.hint > .active, .time > .active {
+.hint.active > *, .time.active > * {
     display: block;
 }
 
