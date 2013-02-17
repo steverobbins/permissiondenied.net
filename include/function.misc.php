@@ -35,6 +35,8 @@ function version($file, $cdn = false) {
 
 function globalVar($protocal, $var, $validate) {
 
+    if (!$var) return $$protocal;
+
     if ($validate) {
 
         if (isset($$protocal[$var])) return $_GET[$var];
@@ -46,12 +48,12 @@ function globalVar($protocal, $var, $validate) {
 
 }
 
-function get($var, $validate = true) {
+function get($var = false, $validate = true) {
 
     return globalVar("_GET", $var, $validate);
 }
 
-function post($var, $validate = true) {
+function post($var = false, $validate = true) {
 
     return globalVar("_POST", $var, $validate);
 }

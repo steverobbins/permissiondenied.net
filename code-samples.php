@@ -29,7 +29,7 @@
         
         <div id="body"><?php
         
-            if (isset(get('r'))) {
+            if (get()) {
             
                 $path = 'include/template/code-samples/' . @$codesamples[get('r')][0];
             

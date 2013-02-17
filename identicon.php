@@ -2,12 +2,12 @@
 
     include 'include/global.php';    
     
-    if (isset(get('t'))) {
+    if (get()) {
         
-        header("Location: " . BASE . "identicon/" . (!empty(get('e')) ? ((int)get('e') <= 0 ? 32 : get('e')) : 32) . "/" . (isset(get('e')) ? md5(get('t')) : get('t')) . '.png');
+        header("Location: " . BASE . "identicon/" . (!empty(get('e')) ? ((int)get('e') <= 0 ? 32 : get('e')) : 32) . "/" . (get() ? md5(get('t')) : get('t')) . '.png');
     }
 
-    if (isset(get('h'))) {
+    if (get()) {
     
         header("Content-Type: image/png");
             
@@ -25,7 +25,7 @@
         
         include 'include/function.identicon.php';
         
-        identicon(get('h'), (isset(get('e')) ? ((int)get('e') > 600 ? 600 : ((int)get('e') <= 0 ? 32 : get('e'))) : 32));        
+        identicon(get('h'), (get() ? ((int)get('e') > 600 ? 600 : ((int)get('e') <= 0 ? 32 : get('e'))) : 32));        
     }
     
 ?><!DOCTYPE html>

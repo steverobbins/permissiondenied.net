@@ -2,7 +2,7 @@
 
 <form method="post" id="custom">
 
-    <textarea name="query"><?=isset(post('y')) ? post('y') : @$row['Query']?></textarea>
+    <textarea name="query"><?=post() ? post('y') : @$row['Query']?></textarea>
     
     <input type="submit" name="submit" value="Submit" />
 
