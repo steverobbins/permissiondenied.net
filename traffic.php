@@ -4,14 +4,14 @@
     include 'include/function.traffic.php';
     include 'include/GeoIP/geoipcity.inc';
     
-    if (isset($_POST['submit'])) {
+    if (isset(post('t'))) {
         
         if (!badQuery()) {
             
             $stmt = $db->prepare("INSERT INTO TrafficCustom (Query, Result, TrafficId, Time)
                                 VALUES (?, ?, ?, NOW())");
                                 
-            $query = userQueryLimit($_POST['query']);
+            $query = userQueryLimit(post('y'));
                                 
             $stmt->execute(array($query, json_encode(userQuery($query)), $_SESSION['traffic']));
     
@@ -28,7 +28,7 @@
         else logBadQuery();
     }
         
-    if (empty($_GET['custom'])) $page = 'include/template/traffic/stats.php';
+    if (empty(get('m'))) $page = 'include/template/traffic/stats.php';
     else {
         
         $page = 'include/template/traffic/results.php';
@@ -37,7 +37,7 @@
                             FROM TrafficCustom
                             WHERE Id = ?");
                             
-        $stmt->execute(array($_GET['custom']));
+        $stmt->execute(array(get('m')));
         
         if ($stmt->rowCount() < 1) {
             
@@ -69,7 +69,7 @@
         
         <style type="text/css">
             
-            <?php if (!isset($_GET['id'])): ?>
+            <?php if (!isset(get('d'))): ?>
             #body {
                 width: 588px;
             }
@@ -93,7 +93,7 @@
         
         <?php include 'include/template/global/header.php' ?>
             
-        <?php if (!isset($_GET['id'])) include 'include/template/global/side.php' ?>
+        <?php if (!isset(get('d'))) include 'include/template/global/side.php' ?>
         
         <div id="body"><?php include $page ?></div>
         

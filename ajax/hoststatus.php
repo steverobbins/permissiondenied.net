@@ -2,7 +2,7 @@
     
 require_once("../include/global.php");
 
-if (isset($_POST['host'])) {
+if (isset(post('t'))) {
     
     require_once("../include/function.hoststatus.php");
     
@@ -12,7 +12,7 @@ if (isset($_POST['host'])) {
     
     $startTime = microtime(true);
     
-    $url = 'http://' . $_POST['host'] . '/';
+    $url = 'http://' . post('t') . '/';
 
     $options['http'] = array('method' => "HEAD");
     
@@ -50,7 +50,7 @@ if (isset($_POST['host'])) {
                 }
             }
             
-            $destinationIp = gethostbyname($_POST['host']);
+            $destinationIp = gethostbyname(post('t'));
             
             $level = $tripTime > 2 ? 4 : ($tripTime > 1.5 ? 3 :($tripTime > 1 ? 2 : ($tripTime > 0.5 ? 2 : 0)));
             $response .= 'Domain is pointing to <b>' . $destinationIp . '</b>.<br />';
@@ -67,6 +67,6 @@ if (isset($_POST['host'])) {
         
     echo json_encode(array("level" => $levels[$level],
                             "status" => $level,
-                            "host" => $_POST['host'],
+                            "host" => post('t'),
                             "response" => $response . "</div>"));
 }

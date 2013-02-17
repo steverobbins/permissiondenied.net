@@ -33,6 +33,29 @@ function version($file, $cdn = false) {
     return preg_replace('{\\.([^./]+)$}', ".$mtime.\$1", $file);
 }
 
+function globalVar($protocal, $var, $validate) {
+
+    if ($validate) {
+
+        if (isset($$protocal[$var])) return $_GET[$var];
+
+        return false;
+    }
+
+    return $$protocal[$var];
+
+}
+
+function get($var, $validate = true) {
+
+    return globalVar("_GET", $var, $validate);
+}
+
+function post($var, $validate = true) {
+
+    return globalVar("_POST", $var, $validate);
+}
+
 /**
  * Set or display error messages/notifications
  * 
