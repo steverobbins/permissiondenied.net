@@ -4,7 +4,7 @@
     
     if (get()) {
         
-        header("Location: " . BASE . "identicon/" . (!empty(get('e')) ? ((int)get('e') <= 0 ? 32 : get('e')) : 32) . "/" . (get() ? md5(get('t')) : get('t')) . '.png');
+        header("Location: " . BASE . "identicon/" . (!get('') ? ((int)get('e') <= 0 ? 32 : get('e')) : 32) . "/" . (get() ? md5(get('t')) : get('t')) . '.png');
     }
 
     if (get()) {

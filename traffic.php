@@ -28,7 +28,7 @@
         else logBadQuery();
     }
         
-    if (empty(get('m'))) $page = 'include/template/traffic/stats.php';
+    if (get('')) $page = 'include/template/traffic/stats.php';
     else {
         
         $page = 'include/template/traffic/results.php';
