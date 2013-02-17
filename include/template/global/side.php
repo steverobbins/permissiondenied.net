@@ -23,15 +23,5 @@
     </ul>
     
     <?php include 'include/template/code-samples/list.php' ?>
-    
-    <!--h2>Me</h2>
-    
-    <ul>
-    
-        <li><a href="<?=BASE?>resume">Resume</a></li>
-    
-        <li><a href="<?=BASE?>contact">Contact</a></li>
-    
-    </ul-->
 
 </div>
