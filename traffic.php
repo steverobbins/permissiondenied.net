@@ -4,7 +4,7 @@
     include 'include/function.traffic.php';
     include 'include/GeoIP/geoipcity.inc';
     
-    if (post()) {
+    if (isset(post('t'))) {
         
         if (!badQuery()) {
             
@@ -69,7 +69,7 @@
         
         <style type="text/css">
             
-            <?php if (!get()): ?>
+            <?php if (!isset(get('d'))): ?>
             #body {
                 width: 588px;
             }
@@ -93,7 +93,7 @@
         
         <?php include 'include/template/global/header.php' ?>
             
-        <?php if (!get()) include 'include/template/global/side.php' ?>
+        <?php if (!isset(get('d'))) include 'include/template/global/side.php' ?>
         
         <div id="body"><?php include $page ?></div>
         

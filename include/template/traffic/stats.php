@@ -137,7 +137,7 @@
     
 </table>
 
-<?php if (get()): ?>
+<?php if (isset(get('w'))): ?>
 
 <h3>Recent User Queries</h3>
 

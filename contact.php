@@ -3,7 +3,7 @@
     include 'include/global.php';
     include 'include/function.contact.php';
     
-    if (post() && !validateContact()) sendContact();
+    if (isset(post('t')) && !validateContact()) sendContact();
     
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">

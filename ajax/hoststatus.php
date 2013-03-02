@@ -2,7 +2,7 @@
     
 require_once("../include/global.php");
 
-if (post()) {
+if (isset(post('t'))) {
     
     require_once("../include/function.hoststatus.php");
     

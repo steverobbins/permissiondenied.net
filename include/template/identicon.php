@@ -14,9 +14,9 @@
 <form action="<?=BASE?>identicon" method="get">
     <fieldset>
         <legend>Identicon Creator</legend>
-        <label>String: <input type="text" name="hashText" value="<?=get() ? get('h') : $_SERVER['REMOTE_ADDR']?>" /></label><br />
-        <label>Image Size: <input type="text" name="imageSize" value="<?=get() ? get('s') : 150?>" /></label>px<br />
-        <label>Hash It?: <input type="checkbox"<?=get() ? '' : ' checked="checked"'?> name="hashValue" value="1" /></label> <em>(using md5)</em><br />
+        <label>String: <input type="text" name="hashText" value="<?=isset(get('h')) ? get('h') : $_SERVER['REMOTE_ADDR']?>" /></label><br />
+        <label>Image Size: <input type="text" name="imageSize" value="<?=isset(get('s')) ? get('s') : 150?>" /></label>px<br />
+        <label>Hash It?: <input type="checkbox"<?=isset(get('v')) ? '' : ' checked="checked"'?> name="hashValue" value="1" /></label> <em>(using md5)</em><br />
         <input type="submit" />
     </fieldset>
 </form>
