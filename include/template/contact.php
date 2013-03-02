@@ -6,7 +6,7 @@
     
         <label for="email">Email</label>
         
-        <input type="text" name="email" id="email" value="<?=@post('l')?>" />
+        <input type="text" name="email" id="email" value="<?=@$_POST['email']?>" />
     
     </div>
 
@@ -14,7 +14,7 @@
     
         <label for="message">Message</label>
         
-        <textarea id="message" name="message"><?=@post('e')?></textarea>
+        <textarea id="message" name="message"><?=@$_POST['message']?></textarea>
     
     </div>
     

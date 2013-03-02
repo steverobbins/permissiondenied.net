@@ -3,7 +3,7 @@
 
     <head>
     
-        <title><?=isset($codesamples[get('r')][1]) ? $codesamples[get('r')][1] . ' - ' : '' ?>Code Samples - <?=SITE_NAME?></title>
+        <title><?=isset($codesamples[$_GET['r']][1]) ? $codesamples[$_GET['r']][1] . ' - ' : '' ?>Code Samples - <?=SITE_NAME?></title>
         
         <style type="text/css">
             
@@ -29,9 +29,9 @@
         
         <div id="body"><?php
         
-            if (isset(get('r'))) {
+            if (isset($_GET['r'])) {
             
-                $path = 'include/template/code-samples/' . @$codesamples[get('r')][0];
+                $path = 'include/template/code-samples/' . @$codesamples[$_GET['r']][0];
             
                 if (file_exists(SERVER_ROOT . $path)) {
                     

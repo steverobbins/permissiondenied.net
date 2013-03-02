@@ -213,7 +213,7 @@ function badQuery() {
     
     foreach ($tables as $key => $value) if (in_array($value, $allowedtables)) unset($tables[$key]);
     
-    if (preg_match("/" . implode("|", $tables) . "|show\stable|schema/i", post('y'))) {
+    if (preg_match("/" . implode("|", $tables) . "|show\stable|schema/i", $_POST['query'])) {
         
         message("We didn't like that query. Try something else.");
         return true;
@@ -234,5 +234,5 @@ function logBadQuery() {
     $stmt = $db->prepare("INSERT INTO TrafficMalicious (Query, TrafficId, Time)
                         VALUES (?, ?, NOW())");
                         
-    $stmt->execute(array(post('y'), $_SESSION['traffic']));
+    $stmt->execute(array($_POST['query'], $_SESSION['traffic']));
 }
