@@ -10,7 +10,7 @@
 
         <td>&nbsp;</td>
 
-        <td class="empty"></td>
+        <td class="hour fourth two"></td>
 
         <td>&nbsp;</td>
 
@@ -44,7 +44,7 @@
 
         <td>&nbsp;</td>
 
-        <td class="empty"></td>
+        <td class="hour third two"></td>
 
         <td>&nbsp;</td>
 
