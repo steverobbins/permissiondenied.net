@@ -101,5 +101,5 @@ RewriteRule ^identicon/hash/([0-9]+)/(.*)\.png$ identicon.php?imageSize=$1&hashT
 
 RewriteRule ^traffic/([0-9]+)$ traffic.php?custom=$1 [L]
 RewriteRule ^traffic/top-browsers-and-their-varients$ traffic.php?custom=14 [L]
-RewriteRule ^traffic/top-page-of-all-time$ traffic.php?custom=15 [L]
+RewriteRule ^traffic/top-pages-of-all-time$ traffic.php?custom=15 [L]
 RewriteRule ^code-samples/([a-zA-Z0-9-]+)$ code-samples.php?r=$1 [L]
