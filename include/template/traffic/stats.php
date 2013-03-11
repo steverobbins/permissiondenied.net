@@ -1,4 +1,4 @@
-<h2>Custom Analytics</h2>
+<h2>Traffic</h2>
 
 <i>All stats are for the last 30 days</i>
 

@@ -10,7 +10,7 @@
     
         <li><a href="<?=BASE?>host-status">Host/Domain Status</a></li>
     
-        <li><a href="<?=BASE?>traffic">Traffixc</a>
+        <li><a href="<?=BASE?>traffic">Traffic</a>
         
             <?php include 'include/template/traffic/list.php' ?>
         
