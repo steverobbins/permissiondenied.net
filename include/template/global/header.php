@@ -18,7 +18,7 @@
         <a class="addthis_counter addthis_bubble_style"></a>
     </div>
 
-    <h1><a href="<?=BASE?>"><?=SITE_NAME?></a></h1>    
+    <h1><a href="<?=BASE?>/"><?=SITE_NAME?></a></h1>    
     
     <!-- AddThis Button BEGIN -->
     <!--script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script-->

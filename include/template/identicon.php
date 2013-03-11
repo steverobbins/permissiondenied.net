@@ -1,4 +1,4 @@
-<h2>Identicon Creator API</h2>
+<h2>PHP Identicon Generator</h2>
 
 <p class="alignC"><?php
 

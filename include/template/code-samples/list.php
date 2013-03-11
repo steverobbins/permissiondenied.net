@@ -1,4 +1,4 @@
-<h2>Code Samples</h2>
+<h2>&nbsp;</h2>
 
 <ul>
 
