@@ -20,7 +20,7 @@
     foreach($result as $r) {
         
         echo "<tr>";
-        foreach($r as $v) echo "<td>" . $v . "</td>";
+        foreach($r as $v) echo "<td>" . htmlentities($v) . "</td>";
         echo "</tr>";
     }
     echo "</tbody>";
