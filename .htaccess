@@ -2,6 +2,8 @@ Options +FollowSymLinks
 RewriteEngine On
 RewriteBase /
 
+Options -Indexes
+
 ###########################
  # Remove www prefix
  ##
@@ -76,10 +78,11 @@ RewriteRule (.*)/index(\.[a-zA-Z]+)*$ $1 [L,R=301]
 ###########################
  # Version control magic
  ##
-
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)\.[\d]{10}\.(css|js|png|jpeg|jpg|gif)$ $1.$2 [L]
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(css|js)/(.*)$ cdn/$1/$2 [L]
 
 ###########################
  # Generic seo
