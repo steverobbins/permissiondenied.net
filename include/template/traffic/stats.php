@@ -249,14 +249,15 @@
 
 <?php endif ?>
 
-<h3>Or Entry Your Own Query</h3>
+<h3>Or Enter Your Own Query</h3>
 
 <p>See Examples:</p>
 
-<?php include 'include/template/traffic/list.php' ?>
+<?php
 
-<?php include 'include/template/traffic/form.php' ?>
+    include 'include/template/traffic/list.php';
+    include 'include/template/traffic/form.php';
+    include 'include/template/traffic/tables.php';
+    include 'include/template/global/comments-small.php';
 
-<?php include 'include/template/traffic/tables.php' ?>
-
-<?php include 'include/template/global/comments-small.php' ?>
+?>

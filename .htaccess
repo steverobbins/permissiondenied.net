@@ -24,7 +24,7 @@ ErrorDocument 404 /error.php?e=404
  # Cache images and flash content for one month
  ##
 <FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf)$">
-Header set Cache-Control "max-age=2592000"
+    Header set Cache-Control "max-age=2592000"
 </FilesMatch>
 
 
@@ -32,7 +32,7 @@ Header set Cache-Control "max-age=2592000"
  # Cache text, css, and javascript files for one week
  ##
 <FilesMatch ".(js|css|pdf|txt)$">
-Header set Cache-Control "max-age=604800"
+    Header set Cache-Control "max-age=604800"
 </FilesMatch>
 
 

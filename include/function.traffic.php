@@ -213,7 +213,7 @@ function badQuery() {
     
     foreach ($tables as $key => $value) if (in_array($value, $allowedtables)) unset($tables[$key]);
     
-    if (preg_match("/" . implode("|", $tables) . "|show\stable|schema/i", $_POST['query'])) {
+    if (preg_match("/" . implode("|", $tables) . "|show\stable|schema|drop/i", $_POST['query'])) {
         
         message("We didn't like that query. Try something else.");
         return true;
