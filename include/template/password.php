@@ -1,6 +1,6 @@
 <h2>Your password is...</h2>
 
-<span id="passowrd">...</span>
+<p id="password">...</p>
 
 <form id="getPassword">
 
