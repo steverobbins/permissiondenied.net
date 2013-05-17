@@ -1,4 +1,9 @@
-<?php include 'include/global.php' ?><!DOCTYPE html>
+<?php
+    
+    include 'include/global.php';
+    include 'include/function.password.php'
+
+?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
     <head>
