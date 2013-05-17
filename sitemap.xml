@@ -39,6 +39,12 @@ xsi:schemaLocation="http://www.google.com/schemas/sitemap/0.84 http://www.google
         <priority>0.6</priority>
     </url>
     <url>
+        <loc>http://permissiondenied.net/password</loc>
+        <lastmod>2013-05-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>http://permissiondenied.net/code-samples/php-class-to-help-create-xml</loc>
         <lastmod>2012-10-19</lastmod>
         <changefreq>monthly</changefreq>
