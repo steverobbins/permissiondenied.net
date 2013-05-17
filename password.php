@@ -14,6 +14,8 @@
         </style>
         
         <?php include 'include/template/global/head.php' ?>
+
+        <script type="text/javascript" src="<?=version('js/jquery.password.js', true)?>"></script>
     
     </head>
     
