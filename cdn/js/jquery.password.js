@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 function getPassword() {
 
-    $.get("ajax/password", function(response) {
+    $.get("ajax/password.php", function(response) {
 
         $('#password').text(response);
     });
