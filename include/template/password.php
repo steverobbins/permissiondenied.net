@@ -1,4 +1,4 @@
-<h2>Your password is...</h2>
+<h2>Your new password is...</h2>
 
 <p id="password"><?php echo getPassword() ?></p>
 
