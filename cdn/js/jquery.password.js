@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-    getPassword();
-
     $("#getPassword").submit(function(e) {
 
         e.returnValue = false;
