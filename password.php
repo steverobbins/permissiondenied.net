@@ -12,6 +12,8 @@
             }
         
         </style>
+
+        <link rel="stylesheet" type="text/css" href="<?=version('css/password.css', true)?>" />
         
         <?php include 'include/template/global/head.php' ?>
 
