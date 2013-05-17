@@ -8,7 +8,7 @@
 
     <head>
     
-        <title>Password Generator<?=SITE_NAME?></title>
+        <title>Password Generator - <?=SITE_NAME?></title>
         
         <style type="text/css">
         
