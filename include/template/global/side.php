@@ -6,7 +6,7 @@
     
         <li><a href="<?=BASE?>binary-clock">Binary Clock</a></li>
     
-        <li><a href="<?=BASE?>binary-clock">Password Generator</a></li>
+        <li><a href="<?=BASE?>password">Password Generator</a></li>
     
         <li><a href="<?=BASE?>identicon">PHP Identicon Generator</a></li>
     
