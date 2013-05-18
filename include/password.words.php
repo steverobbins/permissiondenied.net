@@ -1188,6 +1188,7 @@ array(
 'seemly',
 'selective',
 'selfish',
+'selfrighteous',
 'separate',
 'serious',
 'shaggy',
