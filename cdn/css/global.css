@@ -52,9 +52,6 @@ li + li, li > ul, li > ol {
     border: 1px solid rgba(255, 255, 255, 0.8);
     -webkit-box-shadow:  0px 0px 1px 1px rgba(0, 0, 0, 0.5);
     box-shadow:  0px 0px 1px 1px rgba(0, 0, 0, 0.5);
-    /*-webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;*/
 }
 
 #header {
@@ -68,13 +65,11 @@ li + li, li > ul, li > ol {
 
 .messages {
     padding: 20px;
-    /*-webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;*/
     -webkit-box-shadow:  0px 0px 1px 1px rgba(0, 0, 0, 0.5);
     box-shadow:  0px 0px 1px 1px rgba(0, 0, 0, 0.5);
     margin: 20px 0;
     display: none;
+    cursor: pointer;
 }
 
 .messages.bad {
