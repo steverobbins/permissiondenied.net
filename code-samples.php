@@ -28,8 +28,6 @@
 
         <?php template('global/header') ?>
 
-            <?php if (empty($_GET)) template('global/side', array('code-samples' => $codesamples)) ?>
-
         <div id="body"><?php
 
             if (isset($_GET['r'])) {
@@ -50,6 +48,8 @@
             else template('code-samples/list', array('code-samples' => $codesamples));
 
         ?></div>
+
+        <?php if (empty($_GET)) template('global/side', array('code-samples' => $codesamples)) ?>
 
         <div class="clear"></div>
 

@@ -21,9 +21,9 @@
         
         <?php template('global/header') ?>
         
-        <?php template('global/side', array('code-samples' => $codesamples)) ?>
-        
         <div id="body"><?php template('htaccess') ?></div>
+        
+        <?php template('global/side', array('code-samples' => $codesamples)) ?>
         
         <div class="clear"></div>
     

@@ -28,10 +28,10 @@
         else logBadQuery();
     }
 
-    if (empty($_GET['custom'])) $page = 'include/template/traffic/stats.php';
+    if (empty($_GET['custom'])) $page = 'traffic/stats';
     else {
 
-        $page = 'include/template/traffic/results.php';
+        $page = 'traffic/results';
 
         $stmt = $db->prepare("SELECT Query, Result, Time
                             FROM TrafficCustom
@@ -42,7 +42,7 @@
         if ($stmt->rowCount() < 1) {
 
             header("HTTP/1.0 404 Not Found");
-            $page = "include/template/global/404.php";
+            $page = "global/404";
         }
         else {
 
@@ -55,7 +55,7 @@
             if (!is_array($result[0])) {
 
                 //if (!$bad) message("Good job. You broke it.");
-                $page = "include/template/traffic/error.php";
+                $page = "traffic/error";
             }
         }
     }
@@ -93,9 +93,9 @@
 
         <?php template('global/header') ?>
 
-        <?php if (!isset($_GET['id'])) template('global/side', array('code-samples' => $codesamples)) ?>
+        <div id="body"><?php template($page, array('allowed-tables' => $allowedtables)) ?></div>
 
-        <div id="body"><?php include $page ?></div>
+        <?php if (!isset($_GET['id'])) template('global/side', array('code-samples' => $codesamples)) ?>
 
         <div class="clear"></div>
 

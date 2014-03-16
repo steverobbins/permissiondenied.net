@@ -21,8 +21,6 @@
         
         <?php message("Good job. You broke it."); template('global/header') ?>
         
-        <?php template('global/side', array('code-samples' => $codesamples)) ?>
-        
         <div id="body" class="alignC">
         
             <p style="font-size: 24em"><?php echo $_GET['e'] ?></p>
@@ -34,6 +32,8 @@
             <?php endif; ?>
             
         </div>
+        
+        <?php template('global/side', array('code-samples' => $codesamples)) ?>
         
         <div class="clear"></div>
     

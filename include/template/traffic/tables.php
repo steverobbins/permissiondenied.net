@@ -2,7 +2,7 @@
 
 <pre class="codesample"><?php
 
-    foreach($allowedtables as $table) {
+    foreach($template['allowed-tables'] as $table) {
         
         $stmt = $db->query("DESCRIBE $table");
         

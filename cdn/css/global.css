@@ -92,6 +92,10 @@ li + li, li > ul, li > ol {
     margin-left: 20px;
 }
 
+#body {
+    float: left;
+}
+
 #side {
     width: 268px;
     float: right;
@@ -116,10 +120,6 @@ li + li, li > ul, li > ol {
 #side * + h3, #body * + h3 {
     margin-top: 20px;
 }
-
-/*#body {
-    min-height: 500px;
-}*/
 
 #footer {
     color: #999;
@@ -236,4 +236,14 @@ table.sortable thead th {
     background:#f4f9fe;
     text-align:center;
     color:#66a3d3;
+}
+
+@media screen and (max-width: 960px){
+    body, #body, #side {
+        width: auto;
+        float: none;
+    }
+    #body {
+        margin-bottom: 20px;
+    }
 }

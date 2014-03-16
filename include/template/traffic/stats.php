@@ -255,9 +255,9 @@
 
 <?php
 
-    include 'include/template/traffic/list.php';
-    include 'include/template/traffic/form.php';
-    include 'include/template/traffic/tables.php';
-    include 'include/template/global/comments-small.php';
+    template('traffic/list');
+    template('traffic/form');
+    template('traffic/tables', array('allowed-tables' => $template['allowed-tables']));
+    template('global/comments-small');
 
 ?>

@@ -30,9 +30,9 @@
 
         <?php template('global/header') ?>
 
-        <?php template('global/side', array('code-samples' => $codesamples)) ?>
-
         <div id="body"><?php template('password') ?></div>
+
+        <?php template('global/side', array('code-samples' => $codesamples)) ?>
 
         <div class="clear"></div>
 

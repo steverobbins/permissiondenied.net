@@ -21,9 +21,9 @@
         
         <?php message("Good job. You broke it."); template('global/header') ?>
         
-        <?php template('global/side', array('code-samples' => $codesamples)) ?>
-        
         <div id="body"><?php template('global/404') ?></div>
+        
+        <?php template('global/side', array('code-samples' => $codesamples)) ?>
         
         <div class="clear"></div>
     
