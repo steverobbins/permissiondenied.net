@@ -5,8 +5,7 @@ yahoo.com
 bing.com
 ebay.com
 stackoverflow.com
-permissiondenied.net
-</textarea>
+permissiondenied.net</textarea>
 
 <br />
 
