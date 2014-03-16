@@ -9,15 +9,15 @@ ini_set("display_errors", 1);
  * Several useful URL related resource used globally.
  */
 define("ABS_BASE", "/");
-define("WEB_ROOT", "http://permissiondenied.net" . BASE);
-define("NICE_URL", "PermissionDenied.net");
-define("SERVER_ROOT", "/path/to/permissiondenied.net/");
-define("CDN", "http://pd-cdn.net/");
+define("WEB_ROOT", "http://example.com" . ABS_BASE);
+define("NICE_URL", "Example.com");
+define("SERVER_ROOT", '/path/to/www/');
+define("CDN", "http://cdn.example.com/");
 
 /**
  * Contact information and other display info.
  */
-define("SITE_NAME", "Permission Denied");
+define("SITE_NAME", "Example Site");
 define("SITE_EMAIL", "email@example.com");
 
 /**
@@ -30,7 +30,7 @@ define("REQUEST_TIME_START", microtime());
  * Capture the current URL.
  * Used for addthis sharing
  */
-$url = $_SERVER["SCRIPT_URL"];
+$url = @$_SERVER["SCRIPT_URL"];
 if (substr($url[0], 0, 1) == "/") substr($url, 1);
 define("CURRENT_URL", "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
 
@@ -38,19 +38,19 @@ define("CURRENT_URL", "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
  * MySQL connection info.
  */
 define("SQL_TYPE", "mysql");
-define("SQL_HOST", "localhost");
-define("SQL_DATABASE", "");
-define("SQL_USER", "");
-define("SQL_PASSWORD", "");
+define("SQL_HOST", "127.0.0.1");
+define("SQL_DATABASE", "mydb");
+define("SQL_USER", "user");
+define("SQL_PASSWORD", "pass");
 
 /**
  * Code sample pages.
  * see include/global/side.php and include/code-samples/list.php
  */
 $codesamples = array(
-    'php-class-to-help-create-xml' => array('xmldoc.php', 'PHP Class to Help Create XML'),
-    'get-data-from-unknown-mysql-database' => array( 'unknowndb.php', 'Get All Data from Unknown Structure of MySQL Database'),
-    'show-all-images-in-directory' => array( 'allimages.php', 'Recursively Loop Through Directory and Show All Images')
+    'php-class-to-help-create-xml' => array('xmldoc', 'PHP Class to Help Create XML'),
+    'get-data-from-unknown-mysql-database' => array( 'unknowndb', 'Get All Data from Unknown Structure of MySQL Database'),
+    'show-all-images-in-directory' => array( 'allimages', 'Recursively Loop Through Directory and Show All Images')
 );
 
 /**
