@@ -33,7 +33,7 @@
 
     <head>
     
-        <title>PHP Identicon Generator - <?=SITE_NAME?></title>
+        <title>PHP Identicon Generator - <?php echo SITE_NAME?></title>
         
         <style type="text/css">
         
@@ -43,7 +43,7 @@
         
         </style>
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
         
         <meta name="description" content="A simple API to create an identicon bashed on a hash string." />
         
@@ -53,15 +53,15 @@
     
     <body>
         
-        <?php include 'include/template/global/header.php' ?>
+        <?php template('global/header.php') ?>
         
-        <?php include 'include/template/global/side.php' ?>
+        <?php template('global/side.php') ?>
         
-        <div id="body"><?php include 'include/template/identicon.php' ?></div>
+        <div id="body"><?php template('identicon.php') ?></div>
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     

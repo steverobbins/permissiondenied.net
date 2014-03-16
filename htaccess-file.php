@@ -3,7 +3,7 @@
 
     <head>
     
-        <title><?=SITE_NAME?>'s .htaccess File - <?=SITE_NAME?></title>
+        <title><?php echo SITE_NAME?>'s .htaccess File - <?php echo SITE_NAME?></title>
         
         <style type="text/css">
         
@@ -13,21 +13,21 @@
         
         </style>
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
     
     </head>
     
     <body>
         
-        <?php include 'include/template/global/header.php' ?>
+        <?php template('global/header.php') ?>
         
-        <?php include 'include/template/global/side.php' ?>
+        <?php template('global/side.php') ?>
         
-        <div id="body"><?php include 'include/template/htaccess.php' ?></div>
+        <div id="body"><?php template('htaccess.php') ?></div>
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     

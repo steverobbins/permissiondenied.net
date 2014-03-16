@@ -1,6 +1,6 @@
 <h2>Defective Browser Detected</h2>
 
-<p>Here at <?=SITE_NAME?>, we support the furthering of technology.  In order to do that, we like to keep up-to-date with the best products.</p>
+<p>Here at <?php echo SITE_NAME?>, we support the furthering of technology.  In order to do that, we like to keep up-to-date with the best products.</p>
 
 <p>The browser you are using has been deemed unfit to render this page.  May we recommend some of the following solutions:</p>
 

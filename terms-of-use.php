@@ -3,15 +3,15 @@
 
     <head>
     
-        <title>Web Site Terms and Conditions of Use - <?=SITE_NAME?></title>
+        <title>Web Site Terms and Conditions of Use - <?php echo SITE_NAME?></title>
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
     
     </head>
     
     <body>
         
-        <?php include 'include/template/global/header.php' ?>
+        <?php template('global/header.php') ?>
         
         <div id="body">
         
@@ -111,7 +111,7 @@
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     

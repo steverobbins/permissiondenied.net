@@ -3,15 +3,15 @@
 
     <head>
     
-        <title>Privacy Policy - <?=SITE_NAME?></title>
+        <title>Privacy Policy - <?php echo SITE_NAME?></title>
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
     
     </head>
     
     <body>
         
-        <?php include 'include/template/global/header.php' ?>
+        <?php template('global/header.php') ?>
         
         <div id="body">
         
@@ -25,7 +25,7 @@ Users may opt out of the use of the DART cookie by visiting the Google ad and co
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     

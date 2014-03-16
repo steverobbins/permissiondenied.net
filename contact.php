@@ -10,7 +10,7 @@
 
     <head>
     
-        <title>Site Traffic - <?=SITE_NAME?></title>
+        <title>Site Traffic - <?php echo SITE_NAME?></title>
         
         <style type="text/css">
         
@@ -20,23 +20,23 @@
         
         </style>
         
-        <link rel="stylesheet" type="text/css" href="<?=version('css/form.css', true)?>" />
+        <link rel="stylesheet" type="text/css" href="<?php echo version('css/form.css', true)?>" />
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
     
     </head>
     
     <body>
         
-        <?php include 'include/template/global/header.php' ?>
+        <?php template('global/header.php') ?>
             
-            <?php include 'include/template/global/side.php' ?>
+            <?php template('global/side.php') ?>
         
-        <div id="body"><?php include 'include/template/contact.php' ?></div>
+        <div id="body"><?php template('contact.php') ?></div>
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     

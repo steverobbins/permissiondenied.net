@@ -8,7 +8,7 @@
 
     <head>
     
-        <title>Password Generator - <?=SITE_NAME?></title>
+        <title>Password Generator - <?php echo SITE_NAME?></title>
         
         <style type="text/css">
         
@@ -18,25 +18,25 @@
         
         </style>
 
-        <link rel="stylesheet" type="text/css" href="<?=version('css/password.css', true)?>" />
+        <link rel="stylesheet" type="text/css" href="<?php echo version('css/password.css', true)?>" />
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
 
-        <script type="text/javascript" src="<?=version('js/jquery.password.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.password.js', true)?>"></script>
     
     </head>
     
     <body>
         
-        <?php include 'include/template/global/header.php' ?>
+        <?php template('global/header.php') ?>
         
-        <?php include 'include/template/global/side.php' ?>
+        <?php template('global/side.php') ?>
         
-        <div id="body"><?php include 'include/template/password.php' ?></div>
+        <div id="body"><?php template('password.php') ?></div>
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     

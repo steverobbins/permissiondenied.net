@@ -4,7 +4,7 @@
 
 <p>See .js comments for documentation</p>
 
-<h2>Download: <a target="_blank" href="<?=version('js/jquery.type.js')?>">jquery.type.js</a></h2>
+<h2>Download: <a target="_blank" href="<?php echo version('js/jquery.type.js')?>">jquery.type.js</a></h2>
 
 <h3>Example</h3>
 
@@ -39,4 +39,4 @@ $('#consoleWindow').type(myStrings, myOptions, function() {
 
 <div></div>
 
-<?php include 'include/template/global/comments-small.php' ?>
+<?php template('global/comments-small.php') ?>

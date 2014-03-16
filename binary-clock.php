@@ -3,19 +3,19 @@
 
     <head>
     
-        <title>jQuery Binary Clock - <?=SITE_NAME?></title>
+        <title>jQuery Binary Clock - <?php echo SITE_NAME?></title>
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
 
-        <link rel="stylesheet" type="text/css" href="<?=version('css/binaryclock.css', true)?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo version('css/binaryclock.css', true)?>">
 
-        <script type="text/javascript" src="<?=version('js/binaryclock.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/binaryclock.js', true)?>"></script>
     
     </head>
     
     <body>
         
-        <?php include 'include/template/binaryclock.php' ?>
+        <?php template('binaryclock.php') ?>
 
     </body>
     

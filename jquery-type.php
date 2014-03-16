@@ -3,7 +3,7 @@
 
     <head>
     
-        <title>jQuery Type Plugin - <?=SITE_NAME?></title>
+        <title>jQuery Type Plugin - <?php echo SITE_NAME?></title>
         
         <meta name="description" content="This is a jQuery plugin that will 'type' text and/or HTML markup into an HTML element.  It accepts multiple strings for a marquee/console style display.  Strings can either be appended to or replace the current string and a callback can be triggered once complete." />
         
@@ -23,10 +23,10 @@
         
         </style>
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
         
-        <script type="text/javascript" src="<?=version('js/jquery.type.min.js', true)?>"></script>
-        <script type="text/javascript" src="<?=version('js/jquery.blink.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.type.min.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.blink.js', true)?>"></script>
         
         <script type="text/javascript">
         
@@ -83,15 +83,15 @@
     
     <body>
         
-        <?php include 'include/template/global/header.php' ?>
+        <?php template('global/header.php') ?>
         
-        <?php include 'include/template/global/side.php' ?>
+        <?php template('global/side.php') ?>
         
-        <div id="body"><?php include 'include/template/jquerytype.php' ?></div>
+        <div id="body"><?php template('jquerytype.php') ?></div>
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     

@@ -11,12 +11,12 @@
 
 ?></p>
 
-<form action="<?=BASE?>identicon" method="get">
+<form action="<?php echo BASE ?>identicon" method="get">
     <fieldset>
         <legend>Identicon Creator</legend>
-        <label>String: <input type="text" name="hashText" value="<?=isset($_GET['h']) ? $_GET['h'] : $_SERVER['REMOTE_ADDR']?>" /></label><br />
-        <label>Image Size: <input type="text" name="imageSize" value="<?=isset($_GET['s']) ? $_GET['s'] : 150?>" /></label>px<br />
-        <label>Hash It?: <input type="checkbox"<?=isset($_GET['v']) ? '' : ' checked="checked"'?> name="hashValue" value="1" /></label> <em>(using md5)</em><br />
+        <label>String: <input type="text" name="hashText" value="<?php echo isset($_GET['h']) ? $_GET['h'] : $_SERVER['REMOTE_ADDR']?>" /></label><br />
+        <label>Image Size: <input type="text" name="imageSize" value="<?php echo isset($_GET['s']) ? $_GET['s'] : 150?>" /></label>px<br />
+        <label>Hash It?: <input type="checkbox"<?php echo isset($_GET['v']) ? '' : ' checked="checked"'?> name="hashValue" value="1" /></label> <em>(using md5)</em><br />
         <input type="submit" />
     </fieldset>
 </form>
@@ -42,7 +42,7 @@ echo '&lt;img src="' . $src . '" height="' . $size . '" width="' . $size . '" al
 
 <p>Produces:<p>
 
-<?='<img src="http://permissiondenied.net/identicon/150/' . md5($_SERVER['REMOTE_ADDR']) . '.png" height="150" width="150" alt="Identicon" />'?>
+<?php echo '<img src="http://permissiondenied.net/identicon/150/' . md5($_SERVER['REMOTE_ADDR']) . '.png" height="150" width="150" alt="Identicon" />'?>
 
 <p>Max image size is 600, default is 32.<br />All images are cached.</p>
 
@@ -55,4 +55,4 @@ echo '&lt;img src="' . $src . '" height="' . $size . '" width="' . $size . '" al
 
 ?></p>
 
-<?php include 'include/template/global/comments-small.php' ?>
+<?php template('global/comments-small.php') ?>

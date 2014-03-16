@@ -3,7 +3,7 @@
 
     <head>
     
-        <title><?=SITE_NAME?></title>
+        <title><?php echo SITE_NAME?></title>
         
         <style type="text/css">
         
@@ -13,7 +13,7 @@
         
         </style>
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
         
         <meta name="description" content="PermissionDenied.net is the personal website of Steven Robbins.  It hosts any projects or apps that he decided to put online for the public.  Steve likes to experiment with new technologies and showcase his work." />
         
@@ -23,15 +23,15 @@
     
     <body>
         
-        <?php include 'include/template/global/header.php' ?>
+        <?php template('global/header.php') ?>
         
-        <?php include 'include/template/global/side.php' ?>
+        <?php template('global/side.php') ?>
         
-        <div id="body"><?php include 'include/template/home.php' ?></div>
+        <div id="body"><?php template('home.php') ?></div>
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     

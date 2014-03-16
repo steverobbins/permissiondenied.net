@@ -7,16 +7,14 @@ Options -Indexes
 ###########################
  # Remove www prefix
  ##
-RewriteCond %{HTTP_HOST} ^www.permissiondenied.net$ [NC]
-RewriteRule ^(.*)$ http://permissiondenied.net/$1 [R=301,L]
-
+RewriteCond %{HTTP_HOST} ^www.permissiondenied.net$
+RewriteRule (.*) http://permissiondenied.net/$1 [L,R=301]
 
 ###########################
  # Error handling
  ##
 ErrorDocument 403 /error.php?e=403
 ErrorDocument 404 /error.php?e=404
-
 
 ###########################
  # Optimization settings
@@ -27,14 +25,12 @@ ErrorDocument 404 /error.php?e=404
     Header set Cache-Control "max-age=2592000"
 </FilesMatch>
 
-
 ###########################
  # Cache text, css, and javascript files for one week
  ##
 <FilesMatch ".(js|css|pdf|txt)$">
     Header set Cache-Control "max-age=604800"
 </FilesMatch>
-
 
 ###########################
  # Compress text, html, javascript, css, xml
@@ -49,7 +45,6 @@ AddOutputFilterByType DEFLATE application/rss+xml
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 
-
 ###########################
  # Fix known 404s
  ##
@@ -61,19 +56,16 @@ RewriteRule ^magento/?$ http://magento.permissiondenied.net [R=301]
 RewriteRule ^traffic/14$ traffic/list-of-browsers-and-their-varients [R=301]
 RewriteRule ^traffic/list-of-browsers-and-their-varients$ traffic/top-browsers-and-their-varients [R=301]
 
-
 ###########################
  # Remove trailing slash on non-directories
  ##
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ $1 [L,R=301]
 
-
 ###########################
  # Move /index.php to /
  ##
 RewriteRule (.*)/index(\.[a-zA-Z]+)*$ $1 [L,R=301]
-
 
 ###########################
  # Version control magic
@@ -94,7 +86,6 @@ RewriteRule ^([a-z0-9-]+)\.php$ $1 [R=301]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([a-z0-9-]+)$ $1.php [L]
-
 
 ###########################
  # App dependencies

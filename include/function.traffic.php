@@ -10,9 +10,14 @@
  * @return array
  */
 function browserGroup(array $browsers, $agent, $count) {
-    
-    if ($b = browser($agent)) $browsers[$b] += $count;
-    
+
+    if ($b = browser($agent)) {
+        if (!isset($browsers[$b])) {
+            $browsers[$b] = 0;
+        }
+        $browsers[$b] += $count;
+    }
+
     return $browsers;
 }
 
@@ -24,7 +29,7 @@ function browserGroup(array $browsers, $agent, $count) {
  * @return string
  */
 function browser($agent) {
-    
+
     //if (preg_match("/bot|spider|w3c|validat|crawl|monitor|php/i", $agent) || empty($agent)) return "Bot/Spider";
     if (preg_match("/Konqueror/", $agent)) return "Konqueror";
     if (preg_match("/SeaMonkey/", $agent)) return "SeaMonkey";
@@ -52,11 +57,16 @@ function browser($agent) {
  * @return array
  */
 function cityGroup($cities, $ip, $count) {
-    
+
     $region = regionFromIp($ip);
-    
-    if (!empty($region)) $cities[$region] += $count;
-    
+
+    if (!empty($region)) {
+        if (!isset($cities[$region])) {
+            $cities[$region] = 0;
+        }
+        $cities[$region] += $count;
+    }
+
     return $cities;
 }
 
@@ -68,17 +78,23 @@ function cityGroup($cities, $ip, $count) {
  * @return string
  */
 function regionFromIp($ip) {
-                            
+
     $gi = geoip_open(SERVER_ROOT . "include/GeoIP/geoip.dat", GEOIP_STANDARD);
-            
+
     $geoip = geoip_record_by_addr($gi, $ip);
-    
-    $loc = htmlentities((!empty($geoip->city) ? $geoip->city . ", " : "") .
-           (!empty($geoip->region) && $geoip->country_name == "United States" ? $geoip->region . ", " : "") .
-           $geoip->country_name);
-    
+
+    if ($geoip) {
+
+        $loc = htmlentities((!empty($geoip->city) ? $geoip->city . ", " : "") .
+               (!empty($geoip->region) && $geoip->country_name == "United States" ? $geoip->region . ", " : "") .
+               $geoip->country_name);
+    }
+    else {
+        $loc = 'unknown';
+    }
+
     geoip_close($gi);
-    
+
     return $loc;
 }
 
@@ -92,25 +108,25 @@ function regionFromIp($ip) {
 function userQuery($string) {
 
     try {
-        
-        $dbr = new PDO(SQL_TYPE . ':host=' . SQL_HOST . ';dbname=' . SQL_DATABASE, 'deniedreadonly', 'Re4d0nlyaccess');
-        
+
+        $dbr = new PDO(SQL_TYPE . ':host=' . SQL_HOST . ';dbname=' . SQL_DATABASE, 'clannet_pdro', 'Re4d0nlyaccess');
+
         $stmt = $dbr->query($string);
-        
-        if (!$stmt) return $dbr->errorInfo();        
+
+        if (!$stmt) return $dbr->errorInfo();
         if ($stmt->rowCount() < 1) return "No results returned";
-        
+
         $return = array();
-        
+
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            
+
             $return[] = $row;
         }
-        
-        return $return;        
+
+        return $return;
     }
-    catch (PDOException $e) {
-        
+    catch (PDOException $err) {
+
         // Catch Expcetions from the above code for our Exception Handling
         $trace = '<table border="0">';
         foreach ($err->getTrace() as $a => $b) {
@@ -137,17 +153,17 @@ function userQuery($string) {
  * @return string
  */
 function userQueryLimit($string) {
-        
+
     preg_match('~(?<=\blimit\s)\s*(?<limit>\d+)\s*(,\s*\d+|\soffset\s+\d+)?\s*$~i', $string, $limitStr);
-    
+
     if (isset($limitStr['limit'])) {
-        
+
         $maxLimit = min((int)$limitStr['limit'], MAX_USER_QUERY_LIMIT);
-        
+
         $query = preg_replace('~(?<=\blimit\s)\s*\d+\s*(,\s*\d+|\soffset\s+\d+)?\s*$~i', MAX_USER_QUERY_LIMIT .'$1', $query);
     }
     else $string .= "\nLIMIT 0, " . MAX_USER_QUERY_LIMIT;
-    
+
     return $string;
 }
 
@@ -160,11 +176,11 @@ function userQueryLimit($string) {
  * @return string
  */
 function obfuscateResult($value, $i = 0) {
-    
+
     $pattern = "/([0-9]{2,3})([^0-9a-zA-Z]+)[0-9]{1,3}([^0-9a-zA-Z]+)[0-9]{1,3}([^0-9a-zA-Z]+)[0-9]{1,3}/";
-    
+
     if (preg_match($pattern, $value)) {
-    
+
         return preg_replace(
             $pattern,
             '${1}${2}' . str_pad(
@@ -184,18 +200,18 @@ function obfuscateResult($value, $i = 0) {
             $value
         );
     }
-    
+
     $pattern = "/[_a-z0-9-]+(\.[_a-z0-9-]+)*@([a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4}))+/";
-    
+
     if (preg_match($pattern, $value)) {
-    
+
         return preg_replace(
             $pattern,
             "hidden_" . (string)$i . "@$2",
             $value
         );
     }
-    
+
     return $value;
 }
 
@@ -205,20 +221,20 @@ function obfuscateResult($value, $i = 0) {
  * @return bool
  */
 function badQuery() {
-    
+
     global $db, $allowedtables;
-    
-    $stmt = $db->query("SHOW TABLES");    
+
+    $stmt = $db->query("SHOW TABLES");
     $tables = $stmt->fetchAll(PDO::FETCH_COLUMN);
-    
+
     foreach ($tables as $key => $value) if (in_array($value, $allowedtables)) unset($tables[$key]);
-    
+
     if (preg_match("/" . implode("|", $tables) . "|show\stable|schema|drop/i", $_POST['query'])) {
-        
+
         message("We didn't like that query. Try something else.");
         return true;
     }
-    
+
     return false;
 }
 
@@ -228,11 +244,11 @@ function badQuery() {
  * @return void
  */
 function logBadQuery() {
-    
+
     global $db;
-            
+
     $stmt = $db->prepare("INSERT INTO TrafficMalicious (Query, TrafficId, Time)
                         VALUES (?, ?, NOW())");
-                        
+
     $stmt->execute(array($_POST['query'], $_SESSION['traffic']));
 }

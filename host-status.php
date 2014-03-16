@@ -2,15 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
     <head>
-    
-        <title>Host Status Tracker - <?=SITE_NAME?></title>
-        
+
+        <title>Host Status Tracker - <?php echo SITE_NAME?></title>
+
         <style type="text/css">
-        
+
             #body {
                 width: 588px;
             }
-                
+
             .response {
                 overflow: hidden;
                 border: 3px black double;
@@ -18,31 +18,31 @@
                 padding: 5px;
                 color: #000000;
             }
-        
+
         </style>
-        
-        <link rel="stylesheet" type="text/css" href="<?=version('css/isotope.css', true)?>" />
-        
-        <?php include 'include/template/global/head.php' ?>
-        
-        <script type="text/javascript" src="<?=version('js/isotope.js', true)?>"></script>
-        <script type="text/javascript" src="<?=version('js/jquery.color.js', true)?>"></script>
-        <script type="text/javascript" src="<?=version('js/jquery.hoststatus.js', true)?>"></script>
-    
+
+        <link rel="stylesheet" type="text/css" href="<?php echo version('css/isotope.css', true)?>" />
+
+        <?php template('global/head.php') ?>
+
+        <script type="text/javascript" src="<?php echo version('js/isotope.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.color.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.hoststatus.js', true)?>"></script>
+
     </head>
-    
+
     <body>
-        
-        <?php include 'include/template/global/header.php' ?>
-        
-        <?php include 'include/template/global/side.php' ?>
-        
-        <div id="body"><?php include 'include/template/hoststatus.php' ?></div>
-        
+
+        <?php template('global/header.php') ?>
+
+        <?php template('global/side.php') ?>
+
+        <div id="body"><?php template('hoststatus.php') ?></div>
+
         <div class="clear"></div>
-    
-        <?php include 'include/template/global/footer.php' ?>
-        
+
+        <?php template('global/footer.php') ?>
+
     </body>
-    
+
 </html>

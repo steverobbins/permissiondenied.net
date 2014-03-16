@@ -3,21 +3,21 @@
 
     <head>
     
-        <title>Resume of Steven Robbins - <?=SITE_NAME?></title>
+        <title>Resume of Steven Robbins - <?php echo SITE_NAME?></title>
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
     
     </head>
     
     <body>
         
-        <?php include 'include/template/global/header.php' ?>
+        <?php template('global/header.php') ?>
         
-        <div id="body"><?php include 'include/template/resume.php' ?></div>
+        <div id="body"><?php template('resume.php') ?></div>
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     

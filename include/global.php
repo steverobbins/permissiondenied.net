@@ -7,11 +7,12 @@ include 'config.php';
 /**
  * Dynamically allocate base path
  */
-$uri = reset(explode("?", preg_replace('/^' . preg_quote(ABS_BASE, '/') . '/', '', $_SERVER['REQUEST_URI'])));
+$uri = explode("?", preg_replace('/^' . preg_quote(ABS_BASE, '/') . '/', '', $_SERVER['REQUEST_URI']));
+$uri = reset($uri);
 define("BASE", str_repeat("../", substr_count($uri, "/")));
 
 include 'class.pdoex.php';
-include 'function.misc.php';
+include 'function.global.php';
 
 /**
  * Set encoding
@@ -26,8 +27,8 @@ try {
     $db = new PDOEx(SQL_TYPE . ':host=' . SQL_HOST . ';dbname=' . SQL_DATABASE, SQL_USER, SQL_PASSWORD);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 } catch (PDOException $e) {
-    print "SQL Error: " . $e->getMessage() . "<br/>";
-    die();
+    echo "SQL Error: " . $e->getMessage() . "<br/>";
+    exit;
 }
 
 /**
@@ -38,7 +39,7 @@ $stmt = $db->prepare("INSERT INTO Traffic (AgentId, IpId, PageId, SessionId, Tim
 $stmt->execute(array(
     trafficId("TrafficAgent", $_SERVER["HTTP_USER_AGENT"]),
     trafficId("TrafficIp", $_SERVER["REMOTE_ADDR"]),
-    trafficId("TrafficPage", $_SERVER["SCRIPT_URL"]),
+    trafficId("TrafficPage", $_SERVER["SCRIPT_NAME"]),
     trafficId("TrafficSession", $_COOKIE["PHPSESSID"])
 ));
 $_SESSION['traffic'] = $db->lastInsertId();

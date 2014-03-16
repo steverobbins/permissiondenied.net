@@ -3,7 +3,7 @@
 
     <head>
     
-        <title>404 - Not Found | <?=SITE_NAME?></title>
+        <title>404 - Not Found | <?php echo SITE_NAME?></title>
         
         <style type="text/css">
         
@@ -13,21 +13,21 @@
         
         </style>
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
     
     </head>
     
     <body>
         
-        <?php message("Good job. You broke it."); include 'include/template/global/header.php' ?>
+        <?php message("Good job. You broke it."); template('global/header.php') ?>
         
-        <?php include 'include/template/global/side.php' ?>
+        <?php template('global/side.php') ?>
         
-        <div id="body"><?php include 'include/template/global/404.php' ?></div>
+        <div id="body"><?php template('global/404.php') ?></div>
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     

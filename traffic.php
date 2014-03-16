@@ -65,7 +65,7 @@
 
     <head>
     
-        <title>Site Traffic - <?=SITE_NAME?></title>
+        <title>Site Traffic - <?php echo SITE_NAME?></title>
         
         <style type="text/css">
             
@@ -83,23 +83,23 @@
         
         </style>
         
-        <?php include 'include/template/global/head.php' ?>
+        <?php template('global/head.php') ?>
         
-        <script type="text/javascript" src="<?=version('js/jquery.tablesorter.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.tablesorter.js', true)?>"></script>
     
     </head>
     
     <body>
         
-        <?php include 'include/template/global/header.php' ?>
+        <?php template('global/header.php') ?>
             
-        <?php if (!isset($_GET['id'])) include 'include/template/global/side.php' ?>
+        <?php if (!isset($_GET['id'])) template('global/side.php') ?>
         
         <div id="body"><?php include $page ?></div>
         
         <div class="clear"></div>
     
-        <?php include 'include/template/global/footer.php' ?>
+        <?php template('global/footer.php') ?>
         
     </body>
     
