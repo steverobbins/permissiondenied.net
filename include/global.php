@@ -5,6 +5,20 @@ session_start();
 include 'config.php';
 
 /**
+ * Used to calculate page render time in footer.
+ * see include/global/footer.php
+ */
+define("REQUEST_TIME_START", microtime());
+
+/**
+ * Capture the current URL.
+ * Used for addthis sharing
+ */
+$url = @$_SERVER["SCRIPT_URL"];
+if (substr($url[0], 0, 1) == "/") substr($url, 1);
+define("CURRENT_URL", "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
+
+/**
  * Dynamically allocate base path
  */
 $uri = explode("?", preg_replace('/^' . preg_quote(ABS_BASE, '/') . '/', '', $_SERVER['REQUEST_URI']));
