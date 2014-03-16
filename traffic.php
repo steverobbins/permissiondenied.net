@@ -4,6 +4,8 @@
     include 'include/function.traffic.php';
     include 'include/GeoIP/geoipcity.inc';
 
+    $templateVars = array('allowed-tables' => $allowedtables);
+
     if (isset($_POST['submit'])) {
 
         if (!badQuery()) {
@@ -49,6 +51,9 @@
             $row = $stmt->fetch();
             $result = json_decode($row['Result'], true);
 
+            $templateVars['row'] = $row;
+            $templateVars['results'] = $results;
+
             message("You are viewing cached results from " . datetime($row['Time']) . ".", null);
             message("For an updated view, simply re-submit this query at the bottom of the page.", null);
 
@@ -93,7 +98,7 @@
 
         <?php template('global/header') ?>
 
-        <div id="body"><?php template($page, array('allowed-tables' => $allowedtables)) ?></div>
+        <div id="body"><?php template($page, $templateVars) ?></div>
 
         <?php if (!isset($_GET['id'])) template('global/side', array('code-samples' => $codesamples)) ?>
 
