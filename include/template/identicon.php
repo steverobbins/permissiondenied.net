@@ -55,4 +55,4 @@ echo '&lt;img src="' . $src . '" height="' . $size . '" width="' . $size . '" al
 
 ?></p>
 
-<?php template('global/comments-small.php') ?>
+<?php template('global/comments-small') ?>

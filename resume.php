@@ -5,19 +5,19 @@
     
         <title>Resume of Steven Robbins - <?php echo SITE_NAME ?></title>
         
-        <?php template('global/head.php') ?>
+        <?php template('global/head') ?>
     
     </head>
     
     <body>
         
-        <?php template('global/header.php') ?>
+        <?php template('global/header') ?>
         
-        <div id="body"><?php template('resume.php') ?></div>
+        <div id="body"><?php template('resume') ?></div>
         
         <div class="clear"></div>
     
-        <?php template('global/footer.php') ?>
+        <?php template('global/footer') ?>
         
     </body>
     

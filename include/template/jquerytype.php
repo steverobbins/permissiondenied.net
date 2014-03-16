@@ -39,4 +39,4 @@ $('#consoleWindow').type(myStrings, myOptions, function() {
 
 <div></div>
 
-<?php template('global/comments-small.php') ?>
+<?php template('global/comments-small') ?>

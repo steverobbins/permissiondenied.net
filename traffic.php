@@ -83,7 +83,7 @@
         
         </style>
         
-        <?php template('global/head.php') ?>
+        <?php template('global/head') ?>
         
         <script type="text/javascript" src="<?php echo version('js/jquery.tablesorter.js', true) ?>"></script>
     
@@ -91,15 +91,15 @@
     
     <body>
         
-        <?php template('global/header.php') ?>
+        <?php template('global/header') ?>
             
-        <?php if (!isset($_GET['id'])) template('global/side.php') ?>
+        <?php if (!isset($_GET['id'])) template('global/side') ?>
         
         <div id="body"><?php include $page ?></div>
         
         <div class="clear"></div>
     
-        <?php template('global/footer.php') ?>
+        <?php template('global/footer') ?>
         
     </body>
     

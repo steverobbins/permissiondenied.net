@@ -5,7 +5,7 @@
     
         <title>jQuery Binary Clock - <?php echo SITE_NAME ?></title>
         
-        <?php template('global/head.php') ?>
+        <?php template('global/head') ?>
 
         <link rel="stylesheet" type="text/css" href="<?php echo version('css/binaryclock.css', true) ?>">
 
@@ -15,7 +15,7 @@
     
     <body>
         
-        <?php template('binaryclock.php') ?>
+        <?php template('binaryclock') ?>
 
     </body>
     

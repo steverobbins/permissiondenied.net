@@ -225,14 +225,24 @@ function charLimit($string, $limit = 50) {
     return substr(strip_tags($string), 0, $limit) . ($overflow === true ? "..." : '');
 }
 
-function template($path) {
+function getRealTemplatePath($path) {
 
-    global $db, $codesamples;
+    $fullPath = SERVER_ROOT . 'include/template/' . $path . '.php';
+    
+    if (!file_exists($fullPath)) {
+        return false;
+    }
+    return $fullPath;
+}
 
-    $fullPath = SERVER_ROOT . 'include/template/' . $path;
+function template($path, array $template = array()) {
 
-    if (!file_exists($fullPath))
-        echo "Template '$path' does not exist.";
+    global $db;
+
+    $fullPath = getRealTemplatePath($path);
+
+    if (!$fullPath)
+        echo "Template '$fullPath' does not exist.";
     else
         include $fullPath;
 }

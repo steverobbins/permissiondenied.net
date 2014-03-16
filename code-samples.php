@@ -2,56 +2,59 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
-    
-        <title><?php echo isset($codesamples[$_GET['r']][1]) ? $codesamples[$_GET['r']][1] . ' - ' : '' ?>Code Samples - <?php echo SITE_NAME ?></title>
-        
+
+        <title><?php
+            $title = isset($codesamples[@$_GET['r']][1]) ? $codesamples[$_GET['r']][1] : '';
+            echo $title ? $title . ' - ' : '';
+        ?>Code Samples - <?php echo SITE_NAME ?></title>
+
         <style type="text/css">
-            
+
             <?php if (empty($_GET)): ?>
             #body {
                 width: 588px;
             }
             <?php endif; ?>
-        
+
         </style>
-        
-        <?php template('global/head.php') ?>
-        
+
+        <?php template('global/head') ?>
+
         <script type="text/javascript" src="<?php echo version('js/jquery.tablesorter.js', true) ?>"></script>
-    
+
     </head>
-    
+
     <body>
-        
-        <?php template('global/header.php') ?>
-            
-            <?php if (empty($_GET)) template('global/side.php') ?>
-        
+
+        <?php template('global/header') ?>
+
+            <?php if (empty($_GET)) template('global/side', array('code-samples' => $codesamples)) ?>
+
         <div id="body"><?php
-        
+
             if (isset($_GET['r'])) {
-            
-                $path = 'include/template/code-samples/' . @$codesamples[$_GET['r']][0];
-            
-                if (file_exists(SERVER_ROOT . $path)) {
-                    
-                    include 'include/template/code-samples/sample.php';
-                    include 'include/template/global/comments-large.php';
+
+                $path = getRealTemplatePath('code-samples/' . @$codesamples[$_GET['r']][0]);
+
+                if ($path) {
+
+                    template('code-samples/sample', array('path' => $path, 'title' => $title));
+                    template('global/comments-large');
                 }
                 else {
 
                     header("HTTP/1.0 404 Not Found");
-                    include 'include/template/global/404.php';
+                    template('global/404');
                 }
             }
-            else include 'include/template/code-samples/list.php';
-            
+            else template('code-samples/list', array('code-samples' => $codesamples));
+
         ?></div>
-        
+
         <div class="clear"></div>
-    
-        <?php template('global/footer.php') ?>
-        
+
+        <?php template('global/footer') ?>
+
     </body>
-    
+
 </html>

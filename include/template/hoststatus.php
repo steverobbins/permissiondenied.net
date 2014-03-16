@@ -15,4 +15,4 @@ permissiondenied.net
 <div id="sort">Sort by: <button class="alphabetical">Alphabetical</button> <button class="status">Status</button> <button class="original">Original</button></div>
 <div id="results"></div>
 
-<?php template('global/comments-small.php') ?>
+<?php template('global/comments-small') ?>

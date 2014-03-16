@@ -20,7 +20,7 @@
 
         <link rel="stylesheet" type="text/css" href="<?php echo version('css/password.css', true) ?>" />
 
-        <?php template('global/head.php') ?>
+        <?php template('global/head') ?>
 
         <script type="text/javascript" src="<?php echo version('js/jquery.password.js', true) ?>"></script>
 
@@ -28,15 +28,15 @@
 
     <body>
 
-        <?php template('global/header.php') ?>
+        <?php template('global/header') ?>
 
-        <?php template('global/side.php') ?>
+        <?php template('global/side', array('code-samples' => $codesamples) ?>
 
-        <div id="body"><?php template('password.php') ?></div>
+        <div id="body"><?php template('password') ?></div>
 
         <div class="clear"></div>
 
-        <?php template('global/footer.php') ?>
+        <?php template('global/footer') ?>
 
     </body>
 

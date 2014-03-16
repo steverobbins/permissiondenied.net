@@ -23,7 +23,7 @@
 
         <link rel="stylesheet" type="text/css" href="<?php echo version('css/isotope.css', true) ?>" />
 
-        <?php template('global/head.php') ?>
+        <?php template('global/head') ?>
 
         <script type="text/javascript" src="<?php echo version('js/isotope.js', true) ?>"></script>
         <script type="text/javascript" src="<?php echo version('js/jquery.color.js', true) ?>"></script>
@@ -33,15 +33,15 @@
 
     <body>
 
-        <?php template('global/header.php') ?>
+        <?php template('global/header') ?>
 
-        <?php template('global/side.php') ?>
+        <?php template('global/side', array('code-samples' => $codesamples) ?>
 
-        <div id="body"><?php template('hoststatus.php') ?></div>
+        <div id="body"><?php template('hoststatus') ?></div>
 
         <div class="clear"></div>
 
-        <?php template('global/footer.php') ?>
+        <?php template('global/footer') ?>
 
     </body>
 
