@@ -53,7 +53,7 @@ $stmt = $db->prepare("INSERT INTO Traffic (AgentId, IpId, PageId, SessionId, Tim
 $stmt->execute(array(
     trafficId("TrafficAgent", $_SERVER["HTTP_USER_AGENT"]),
     trafficId("TrafficIp", $_SERVER["REMOTE_ADDR"]),
-    trafficId("TrafficPage", $_SERVER["SCRIPT_NAME"]),
-    trafficId("TrafficSession", $_COOKIE["PHPSESSID"])
+    trafficId("TrafficPage", $_SERVER["REQUEST_URI"]),
+    trafficId("TrafficSession", @$_COOKIE["PHPSESSID"])
 ));
 $_SESSION['traffic'] = $db->lastInsertId();
