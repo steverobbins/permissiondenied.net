@@ -160,7 +160,7 @@ function userQueryLimit($string) {
 
         $maxLimit = min((int)$limitStr['limit'], MAX_USER_QUERY_LIMIT);
 
-        $query = preg_replace('~(?<=\blimit\s)\s*\d+\s*(,\s*\d+|\soffset\s+\d+)?\s*$~i', MAX_USER_QUERY_LIMIT .'$1', $query);
+        $string = preg_replace('~(?<=\blimit\s)\s*\d+\s*(,\s*\d+|\soffset\s+\d+)?\s*$~i', MAX_USER_QUERY_LIMIT .'$1', $string);
     }
     else $string .= "\nLIMIT 0, " . MAX_USER_QUERY_LIMIT;
 

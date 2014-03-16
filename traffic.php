@@ -52,7 +52,7 @@
             $result = json_decode($row['Result'], true);
 
             $templateVars['row'] = $row;
-            $templateVars['result'] = $results;
+            $templateVars['result'] = $result;
 
             message("You are viewing cached results from " . datetime($row['Time']) . ".", null);
             message("For an updated view, simply re-submit this query at the bottom of the page.", null);
