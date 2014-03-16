@@ -2,6 +2,8 @@
 <link type="text/css" rel="stylesheet" href="<?php echo version("css/global.css", true) ?>" />
 <link type="text/css" rel="stylesheet" href="<?php echo version("css/highlight.css", true) ?>" />
 
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <script type="text/javascript" src="<?php echo version("js/highlight.min.js", true) ?>"></script>
