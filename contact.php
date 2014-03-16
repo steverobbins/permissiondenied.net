@@ -30,7 +30,7 @@
         
         <?php template('global/header') ?>
             
-            <?php template('global/side', array('code-samples' => $codesamples) ?>
+            <?php template('global/side', array('code-samples' => $codesamples)) ?>
         
         <div id="body"><?php template('contact') ?></div>
         
