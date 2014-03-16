@@ -1,6 +1,6 @@
 <h2>Your new password is...</h2>
 
-<p id="password"><?php echo getPassword() ?></p>
+<p id="password"><?php echo getPassword()  ?></p>
 
 <form id="getPassword">
 

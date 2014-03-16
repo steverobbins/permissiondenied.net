@@ -3,7 +3,7 @@
 
     <head>
     
-        <title>jQuery Type Plugin - <?php echo SITE_NAME?></title>
+        <title>jQuery Type Plugin - <?php echo SITE_NAME ?></title>
         
         <meta name="description" content="This is a jQuery plugin that will 'type' text and/or HTML markup into an HTML element.  It accepts multiple strings for a marquee/console style display.  Strings can either be appended to or replace the current string and a callback can be triggered once complete." />
         
@@ -25,8 +25,8 @@
         
         <?php template('global/head.php') ?>
         
-        <script type="text/javascript" src="<?php echo version('js/jquery.type.min.js', true)?>"></script>
-        <script type="text/javascript" src="<?php echo version('js/jquery.blink.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.type.min.js', true) ?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.blink.js', true) ?>"></script>
         
         <script type="text/javascript">
         

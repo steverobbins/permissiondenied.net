@@ -3,7 +3,7 @@
 
     <head>
     
-        <title><?php echo $_GET['e']?> | <?php echo SITE_NAME?></title>
+        <title><?php echo $_GET['e']?> | <?php echo SITE_NAME ?></title>
         
         <style type="text/css">
         
@@ -25,11 +25,11 @@
         
         <div id="body" class="alignC">
         
-            <p style="font-size: 24em"><?php echo $_GET['e']?></p>
+            <p style="font-size: 24em"><?php echo $_GET['e'] ?></p>
             
             <?php if (isset($httpcodes[(int)$_GET['e']])): ?>
             
-            <p><?php echo $httpcodes[$_GET['e']]?></p>
+            <p><?php echo $httpcodes[$_GET['e']] ?></p>
             
             <?php endif; ?>
             

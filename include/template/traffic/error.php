@@ -1,6 +1,6 @@
-<h2><a href="<?php echo BASE ?>traffic">Traffic</a> - Query</h2>
+<h2><a href="<?php echo BASE  ?>traffic">Traffic</a> - Query</h2>
 
-<pre class="codesample"><?php echo $row['Query']?></pre>
+<pre class="codesample"><?php echo $row['Query'] ?></pre>
 
 <h3>Result</h3>
 

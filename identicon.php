@@ -33,7 +33,7 @@
 
     <head>
     
-        <title>PHP Identicon Generator - <?php echo SITE_NAME?></title>
+        <title>PHP Identicon Generator - <?php echo SITE_NAME ?></title>
         
         <style type="text/css">
         

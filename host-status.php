@@ -3,7 +3,7 @@
 
     <head>
 
-        <title>Host Status Tracker - <?php echo SITE_NAME?></title>
+        <title>Host Status Tracker - <?php echo SITE_NAME ?></title>
 
         <style type="text/css">
 
@@ -21,13 +21,13 @@
 
         </style>
 
-        <link rel="stylesheet" type="text/css" href="<?php echo version('css/isotope.css', true)?>" />
+        <link rel="stylesheet" type="text/css" href="<?php echo version('css/isotope.css', true) ?>" />
 
         <?php template('global/head.php') ?>
 
-        <script type="text/javascript" src="<?php echo version('js/isotope.js', true)?>"></script>
-        <script type="text/javascript" src="<?php echo version('js/jquery.color.js', true)?>"></script>
-        <script type="text/javascript" src="<?php echo version('js/jquery.hoststatus.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/isotope.js', true) ?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.color.js', true) ?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.hoststatus.js', true) ?>"></script>
 
     </head>
 

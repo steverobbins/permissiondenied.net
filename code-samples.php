@@ -3,7 +3,7 @@
 
     <head>
     
-        <title><?php echo isset($codesamples[$_GET['r']][1]) ? $codesamples[$_GET['r']][1] . ' - ' : '' ?>Code Samples - <?php echo SITE_NAME?></title>
+        <title><?php echo isset($codesamples[$_GET['r']][1]) ? $codesamples[$_GET['r']][1] . ' - ' : '' ?>Code Samples - <?php echo SITE_NAME ?></title>
         
         <style type="text/css">
             
@@ -17,7 +17,7 @@
         
         <?php template('global/head.php') ?>
         
-        <script type="text/javascript" src="<?php echo version('js/jquery.tablesorter.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.tablesorter.js', true) ?>"></script>
     
     </head>
     

@@ -3,7 +3,7 @@
 
     <head>
     
-        <title><?php echo SITE_NAME?>'s .htaccess File - <?php echo SITE_NAME?></title>
+        <title><?php echo SITE_NAME?>'s .htaccess File - <?php echo SITE_NAME ?></title>
         
         <style type="text/css">
         

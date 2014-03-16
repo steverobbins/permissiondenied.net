@@ -1,15 +1,15 @@
-<link type="text/css" rel="stylesheet" href="<?php echo version("css/normalize.css", true)?>" />
-<link type="text/css" rel="stylesheet" href="<?php echo version("css/global.css", true)?>" />
-<link type="text/css" rel="stylesheet" href="<?php echo version("css/highlight.css", true)?>" />
+<link type="text/css" rel="stylesheet" href="<?php echo version("css/normalize.css", true) ?>" />
+<link type="text/css" rel="stylesheet" href="<?php echo version("css/global.css", true) ?>" />
+<link type="text/css" rel="stylesheet" href="<?php echo version("css/highlight.css", true) ?>" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<script type="text/javascript" src="<?php echo version("js/highlight.min.js", true)?>"></script>
-<script type="text/javascript" src="<?php echo version("js/jquery.js", true)?>"></script>
-<?php /*<script type="text/javascript" src="<?php echo version("js/global.js")?>"></script>*/ ?>
+<script type="text/javascript" src="<?php echo version("js/highlight.min.js", true) ?>"></script>
+<script type="text/javascript" src="<?php echo version("js/jquery.js", true) ?>"></script>
+<?php /*<script type="text/javascript" src="<?php echo version("js/global.js")?>"></script>*/  ?>
 <script type="text/javascript">
 
-    <?php echo file_get_contents(SERVER_ROOT . "cdn/js/global.js")?>
+    <?php echo file_get_contents(SERVER_ROOT . "cdn/js/global.js") ?>
 
 </script>
 <!-- AddThis Welcome BEGIN -->

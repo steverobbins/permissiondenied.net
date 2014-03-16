@@ -3,7 +3,7 @@
 
     <head>
     
-        <title>Resume of Steven Robbins - <?php echo SITE_NAME?></title>
+        <title>Resume of Steven Robbins - <?php echo SITE_NAME ?></title>
         
         <?php template('global/head.php') ?>
     

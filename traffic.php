@@ -65,7 +65,7 @@
 
     <head>
     
-        <title>Site Traffic - <?php echo SITE_NAME?></title>
+        <title>Site Traffic - <?php echo SITE_NAME ?></title>
         
         <style type="text/css">
             
@@ -85,7 +85,7 @@
         
         <?php template('global/head.php') ?>
         
-        <script type="text/javascript" src="<?php echo version('js/jquery.tablesorter.js', true)?>"></script>
+        <script type="text/javascript" src="<?php echo version('js/jquery.tablesorter.js', true) ?>"></script>
     
     </head>
     

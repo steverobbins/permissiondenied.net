@@ -12,7 +12,7 @@
 
 ?>
 
-<h3>Unique Visitors: <?php echo $row['Count']?></h3>
+<h3>Unique Visitors: <?php echo $row['Count'] ?></h3>
 
 <h3>Top 10 Pages</h3>
 

@@ -33,7 +33,7 @@ foreach ($aTables as $table) {
 
 for ($i = 0; $i < count($aTables); $i++): ?>
 
-<h2><?php echo $aTables[$i]; ?></h2>
+<h2><?php echo $aTables[$i];  ?></h2>
 
 <table><?php
     

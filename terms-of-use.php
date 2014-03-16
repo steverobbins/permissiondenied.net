@@ -3,7 +3,7 @@
 
     <head>
     
-        <title>Web Site Terms and Conditions of Use - <?php echo SITE_NAME?></title>
+        <title>Web Site Terms and Conditions of Use - <?php echo SITE_NAME ?></title>
         
         <?php template('global/head.php') ?>
     

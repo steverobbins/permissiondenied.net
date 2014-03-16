@@ -3,7 +3,7 @@
 
     <head>
     
-        <title>Privacy Policy - <?php echo SITE_NAME?></title>
+        <title>Privacy Policy - <?php echo SITE_NAME ?></title>
         
         <?php template('global/head.php') ?>
     

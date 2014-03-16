@@ -3,7 +3,7 @@
 
     <head>
     
-        <title>404 - Not Found | <?php echo SITE_NAME?></title>
+        <title>404 - Not Found | <?php echo SITE_NAME ?></title>
         
         <style type="text/css">
         

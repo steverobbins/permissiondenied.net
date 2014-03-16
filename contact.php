@@ -10,7 +10,7 @@
 
     <head>
     
-        <title>Site Traffic - <?php echo SITE_NAME?></title>
+        <title>Site Traffic - <?php echo SITE_NAME ?></title>
         
         <style type="text/css">
         
@@ -20,7 +20,7 @@
         
         </style>
         
-        <link rel="stylesheet" type="text/css" href="<?php echo version('css/form.css', true)?>" />
+        <link rel="stylesheet" type="text/css" href="<?php echo version('css/form.css', true) ?>" />
         
         <?php template('global/head.php') ?>
     
